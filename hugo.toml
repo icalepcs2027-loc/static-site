@@ -25,8 +25,8 @@ about_image = "/img/kanko.png"
 enable_countdown = true
 enable_sponsors = false
 enable_stats = false
-hide_oc_members = true
-hide_spc_members = true
+hide_oc_members = false
+hide_spc_members = false
 hide_sab_members = true
 hide_loc_members = false
 
@@ -214,181 +214,6 @@ tagline = "Turn-key synchrotron light source solutions worldwide."
 # International Organizing Committee Members
 # ----------------------------------------------------
 [[params.committee_oc]]
-name = "Jie"
-surname = "Wei"
-institution = "FRIB"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Fulvia"
-surname = "Pilat"
-institution = "ORNL"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Ralitsa"
-surname = "Sharankova"
-institution = "FNAL"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Frederic"
-surname = "Le Pimpec"
-institution = "CLS"
-location = "Canada"
-chair = false
-
-[[params.committee_oc]]
-name = "Vadim"
-surname = "Sajaev"
-institution = "ANL"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Lin"
-surname = "Liu"
-institution = "LNLS"
-location = "Brazil"
-chair = false
-
-[[params.committee_oc]]
-name = "Oliver"
-surname = "Kester"
-institution = "TRIUMF"
-location = "Canada"
-chair = false
-
-[[params.committee_oc]]
-name = "Mattias"
-surname = "Liepe"
-institution = "Cornell"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Wolfram"
-surname = "Fischer"
-institution = "BNL"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Dan"
-surname = "Wang"
-institution = "LBNL"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Todd"
-surname = "Satogata"
-institution = "JLab"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Zhirong"
-surname = "Huang"
-institution = "SLAC"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Bruce"
-surname = "Carlsten"
-institution = "LANL"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Peter"
-surname = "Ostroumov"
-institution = "FRIB"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "David"
-surname = "Bruwhiler"
-institution = "RadiaSoft"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Pietro"
-surname = "Musumeci"
-institution = "UCLA"
-location = "USA"
-chair = false
-
-[[params.committee_oc]]
-name = "Enrica"
-surname = "Chiadroni"
-institution = "La Sapienza"
-location = "Italy"
-chair = false
-
-[[params.committee_oc]]
-name = "Ralf"
-surname = "Gebel"
-institution = "FZJ & GSI"
-location = "Germany"
-chair = false
-
-[[params.committee_oc]]
-name = "Jordi"
-surname = "Marcos"
-institution = "CELLS"
-location = "Spain"
-chair = false
-
-[[params.committee_oc]]
-name = "Atoosa"
-surname = "Meseck"
-institution = "HZB"
-location = "Germany"
-chair = false
-
-[[params.committee_oc]]
-name = "Eduard"
-surname = "Prat"
-institution = "PSI"
-location = "Switzerland"
-chair = false
-
-[[params.committee_oc]]
-name = "John"
-surname = "Thomason"
-institution = "STFC"
-location = "UK"
-chair = false
-
-[[params.committee_oc]]
-name = "Rogelio"
-surname = "Tomas"
-institution = "CERN"
-location = "Switzerland"
-chair = false
-
-[[params.committee_oc]]
-name = "Adriana"
-surname = "Wawrzyniak"
-institution = "Solaris"
-location = "Poland"
-chair = false
-
-[[params.committee_oc]]
-name = "Yoichi"
-surname = "Sato"
-institution = "J-PARC"
-location = "Japan"
-chair = false
-
-[[params.committee_oc]]
 name = "Tadashi"
 surname = "Koseki"
 institution = "KEK"
@@ -398,38 +223,87 @@ chair = true
 avatar = "/img/koseki.png"
 
 [[params.committee_oc]]
+name = "Juan"
+surname = "Barraza"
+institution = "LANL"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
+name = "Nuria"
+surname = "Catalan Lasheras"
+institution = "CERN"
+location = "Switzerland"
+chair = false
+
+[[params.committee_oc]]
+name = "Tessa"
+surname = "Charles"
+institution = "ANSTO"
+location = "Australia"
+chair = false
+
+[[params.committee_oc]]
+name = "Nicholas"
+surname = "Evans"
+institution = "ORNL"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
+name = "David"
+surname = "Funk"
+institution = "NNSS"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
+name = "Gianluca"
+surname = "Geloni"
+institution = "European XFEL"
+location = "Germany"
+chair = false
+
+[[params.committee_oc]]
+name = "Yue"
+surname = "Hao"
+institution = "FRIB"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
 name = "Toru"
 surname = "Hara"
-institution = "RIKEN/Spring-8"
+institution = "RIKEN/SPring-8"
 location = "Japan"
 chair = false
 
 [[params.committee_oc]]
-name = "Yuan"
-surname = "He"
-institution = "IMP"
-location = "China"
+name = "Rajesh V"
+surname = "Hariwal"
+institution = "IUAC"
+location = "India"
 chair = false
 
 [[params.committee_oc]]
-name = "Haixiao"
-surname = "Deng"
-institution = "SARI"
-location = "China"
-chair = false
-
-[[params.committee_oc]]
-name = "Seunghwan"
-surname = "Shin"
-institution = "4GSR/KBSI"
-location = "Korea"
-chair = false
-
-[[params.committee_oc]]
-name = "Ming-Chyuan"
-surname = "Lin"
+name = "Jui-Che"
+surname = "Huang"
 institution = "NSRRC"
 location = "Taiwan"
+chair = false
+
+[[params.committee_oc]]
+name = "Hunchang"
+surname = "Jin"
+institution = "KBSI"
+location = "South Korea"
+chair = false
+
+[[params.committee_oc]]
+name = "Osamu"
+surname = "Kamigaito"
+institution = "RIKEN/Nishina"
+location = "Japan"
 chair = false
 
 [[params.committee_oc]]
@@ -440,135 +314,147 @@ location = "Thailand"
 chair = false
 
 [[params.committee_oc]]
-name = "Peter"
-surname = "McIntosh"
-institution = "STFC"
-location = "UK"
-desc = "Advisor"
-chair = false
-
-# ----------------------------------------------------
-# Scientific Program Committee Members
-# ----------------------------------------------------
-[[params.committee_spc]]
-name = "Sarah"
-surname = "Cousineau"
-institution = "ORNL"
-location = "USA"
-chair = false
-
-[[params.committee_spc]]
-name = "Ralitsa"
-surname = "Sharankova"
-institution = "FNAL"
-location = "USA"
-chair = false
-
-[[params.committee_spc]]
-name = "Vadim"
-surname = "Sajaev"
-institution = "ANL"
-location = "USA"
-chair = false
-
-[[params.committee_spc]]
-name = "Oliver"
-surname = "Kester"
-institution = "TRIUMF"
+name = "Frederic"
+surname = "Le Pimpec"
+institution = "CLS"
 location = "Canada"
 chair = false
 
-[[params.committee_spc]]
-name = "Wolfram"
-surname = "Fischer"
-institution = "BNL"
-location = "USA"
+[[params.committee_oc]]
+name = "Zong-Kai"
+surname = "Liu"
+institution = "NSRRC"
+location = "Taiwan"
 chair = false
 
-[[params.committee_spc]]
-name = "Dan"
-surname = "Wang"
-institution = "LBNL"
-location = "USA"
+[[params.committee_oc]]
+name = "Wei"
+surname = "Lu"
+institution = "IHEP"
+location = "China"
 chair = false
 
-[[params.committee_spc]]
-name = "Todd"
-surname = "Satogata"
-institution = "JLab"
-location = "USA"
+[[params.committee_oc]]
+name = "Angie"
+surname = "Orduz"
+institution = "GANIL"
+location = "France"
 chair = false
 
-[[params.committee_spc]]
-name = "Zhirong"
-surname = "Huang"
-institution = "SLAC"
-location = "USA"
+[[params.committee_oc]]
+name = "Hywel"
+surname = "Owen"
+institution = "STFC"
+location = "United Kingdom"
 chair = false
 
-[[params.committee_spc]]
-name = "Peter"
-surname = "Ostroumov"
-institution = "FRIB"
-location = "USA"
-chair = false
-
-[[params.committee_spc]]
-name = "Jordi"
-surname = "Marcos"
-institution = "CELLS"
-location = "Spain"
-chair = false
-
-[[params.committee_spc]]
-name = "Atoosa"
-surname = "Meseck"
-institution = "HZB"
-location = "Germany"
-chair = false
-
-[[params.committee_spc]]
-name = "Eduard"
-surname = "Prat"
-institution = "PSI"
+[[params.committee_oc]]
+name = "Yannis"
+surname = "Papaphilippou"
+institution = "CERN"
 location = "Switzerland"
 chair = false
 
-[[params.committee_spc]]
-name = "Adriana"
-surname = "Wawrzyniak"
-institution = "Solaris"
-location = "Poland"
+[[params.committee_oc]]
+name = "Ciprian"
+surname = "Plostinar"
+institution = "ESS"
+location = "Sweden"
 chair = false
 
-[[params.committee_spc]]
+[[params.committee_oc]]
+name = "Thapakron"
+surname = "Pulampong"
+institution = "SLRI"
+location = "Thailand"
+chair = false
+
+[[params.committee_oc]]
+name = "Vadim"
+surname = "Sajaev"
+institution = "ANL"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
 name = "Yoichi"
 surname = "Sato"
-institution = "J-PARC"
+institution = "KEK/J-PARC"
 location = "Japan"
 chair = false
 
-[[params.committee_spc]]
-name = "Toru"
-surname = "Hara"
-institution = "RIKEN/Spring-8"
+[[params.committee_oc]]
+name = "Todd"
+surname = "Satogata"
+institution = "JLab"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
+name = "Timur"
+surname = "Shaftan"
+institution = "BNL"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
+name = "Chi-Hyun"
+surname = "Shim"
+institution = "PAL"
+location = "South Korea"
+chair = false
+
+[[params.committee_oc]]
+name = "Toshiyuki"
+surname = "Shirai"
+institution = "QST"
 location = "Japan"
 chair = false
 
-[[params.committee_spc]]
-name = "Yuan "
-surname = "He"
+[[params.committee_oc]]
+name = "Yoshihiro"
+surname = "Shobuda"
+institution = "JAEA/J-PARC"
+location = "Japan"
+chair = false
+
+[[params.committee_oc]]
+name = "Liangting"
+surname = "Sun"
 institution = "IMP"
 location = "China"
 chair = false
 
-[[params.committee_spc]]
-name = "Seunghwan"
-surname = "Shin"
-institution = "4GSR/KBSI"
-location = "Korea"
+[[params.committee_oc]]
+name = "Eugene"
+surname = "Tan"
+institution = "ANSTO"
+location = "Australia"
 chair = false
 
+[[params.committee_oc]]
+name = "Rogelio"
+surname = "Tomas"
+institution = "CERN"
+location = "Switzerland"
+chair = false
+
+[[params.committee_oc]]
+name = "Dan"
+surname = "Wang"
+institution = "LBNL"
+location = "United States"
+chair = false
+
+[[params.committee_oc]]
+name = "Adriana"
+surname = "Wawrzyniak"
+institution = "SOLARIS"
+location = "Poland"
+chair = false
+# ----------------------------------------------------
+# Scientific Program Committee Members
+# ----------------------------------------------------
 [[params.committee_spc]]
 name = "Naruhiko"
 surname = "Sakamoto"
@@ -577,6 +463,125 @@ location = "Japan"
 desc = "SPC Chair"
 chair = true
 avatar = "/img/sakamoto.png"
+
+[[params.committee_spc]]
+name = "Juan"
+surname = "Barraza"
+institution = "LANL"
+location = "United States"
+chair = false
+
+[[params.committee_spc]]
+name = "Nuria"
+surname = "Catalan Lasheras"
+institution = "CERN"
+location = "Switzerland"
+chair = false
+
+[[params.committee_spc]]
+name = "Tessa"
+surname = "Charles"
+institution = "ANSTO"
+location = "Australia"
+chair = false
+
+[[params.committee_spc]]
+name = "Nicholas"
+surname = "Evans"
+institution = "ORNL"
+location = "United States"
+chair = false
+
+[[params.committee_spc]]
+name = "Gianluca"
+surname = "Geloni"
+institution = "European XFEL"
+location = "Germany"
+chair = false
+
+[[params.committee_spc]]
+name = "Yue"
+surname = "Hao"
+institution = "FRIB"
+location = "United States"
+chair = false
+
+[[params.committee_spc]]
+name = "Toru"
+surname = "Hara"
+institution = "RIKEN/SPring-8"
+location = "Japan"
+chair = false
+
+[[params.committee_spc]]
+name = "Zong-Kai"
+surname = "Liu"
+institution = "NSRRC"
+location = "Taiwan"
+chair = false
+
+[[params.committee_spc]]
+name = "Wei"
+surname = "Lu"
+institution = "IHEP"
+location = "China"
+chair = false
+
+[[params.committee_spc]]
+name = "Yannis"
+surname = "Papaphilippou"
+institution = "CERN"
+location = "Switzerland"
+chair = false
+
+[[params.committee_spc]]
+name = "Thapakron"
+surname = "Pulampong"
+institution = "SLRI"
+location = "Thailand"
+chair = false
+
+[[params.committee_spc]]
+name = "Vadim"
+surname = "Sajaev"
+institution = "ANL"
+location = "United States"
+chair = false
+
+[[params.committee_spc]]
+name = "Chi-Hyun"
+surname = "Shim"
+institution = "PAL"
+location = "South Korea"
+chair = false
+
+[[params.committee_spc]]
+name = "Yoshihiro"
+surname = "Shobuda"
+institution = "JAEA/J-PARC"
+location = "Japan"
+chair = false
+
+[[params.committee_spc]]
+name = "Liangting"
+surname = "Sun"
+institution = "IMP"
+location = "China"
+chair = false
+
+[[params.committee_spc]]
+name = "Dan"
+surname = "Wang"
+institution = "LBNL"
+location = "United States"
+chair = false
+
+[[params.committee_spc]]
+name = "Adriana"
+surname = "Wawrzyniak"
+institution = "SOLARIS"
+location = "Poland"
+chair = false
 
 # ----------------------------------------------------
 # Scientific Advisory Board
