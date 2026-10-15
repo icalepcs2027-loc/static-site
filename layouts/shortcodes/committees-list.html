@@ -1,16 +1,16 @@
 {{ $committees := slice
-    (dict "id" "oc" "title" "Organizing Committee (OC)" "data" .Site.Params.committee_oc)
-    (dict "id" "spc" "title" "Scientific Program Committee (SPC)" "data" .Site.Params.committee_spc)
-    (dict "id" "sab" "title" "Scientific Advisory Board (SAB)" "data" .Site.Params.committee_sab)
-    (dict "id" "loc" "title" "Local Organizing Committee (LOC)" "data" .Site.Params.committee_loc)
+    hugo.Data.committees.oc
+    hugo.Data.committees.spc
+    hugo.Data.committees.sab
+    hugo.Data.committees.loc
 }}
 
 {{ range $committees }}
-    {{ if .data }}
+    {{ if . }}
     {{ $id := .id }}
-    {{ $chairs := where .data "chair" true }}
-    {{ $members := where .data "chair" "!=" true }}
-    {{ $hideMembers := index $.Site.Params (printf "hide_%s_members" $id) }}
+    {{ $chairs := .chairs }}
+    {{ $members := .members }}
+    {{ $hideMembers := .hide_members }}
     
     <!-- Collapsible main committee panel -->
     <details class="group border border-slate-100 dark:border-slate-800 rounded-2xl shadow-sm bg-white dark:bg-slate-900 overflow-hidden mb-8" open>
