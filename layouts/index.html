@@ -33,7 +33,7 @@
             <div class="lg:col-span-5 flex justify-center lg:justify-end fade-up visible delay-2">
                 <div class="relative group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-2xl blur-xl opacity-30 group-hover:opacity-45 transition duration-1000"></div>
-                    <img src="{{ .Site.Params.hero_image | relURL }}" alt="Conference Poster" class="relative rounded-2xl shadow-2xl border-4 border-white/10 w-full max-w-[380px] object-contain hover:scale-[1.02] transition-transform duration-300">
+                    <img src="{{ .Site.Params.hero_image | strings.TrimPrefix "/" | relURL }}" alt="Conference Poster" class="relative rounded-2xl shadow-2xl border-4 border-white/10 w-full max-w-[380px] object-contain hover:scale-[1.02] transition-transform duration-300">
                 </div>
             </div>
         </div>
@@ -270,13 +270,13 @@
                 {{/* Loop 1 */}}
                 {{ range hugo.Data.sponsors }}
                     <a href="{{ .url }}" class="flex items-center justify-center bg-white px-8 py-4 w-44 h-20 rounded-xl shadow-sm border border-slate-150/40 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary/20 transition-all duration-200 flex-shrink-0" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
-                        <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
+                        <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
                     </a>
                 {{ end }}
                 {{/* Loop 2 (seamless connector) */}}
                 {{ range hugo.Data.sponsors }}
                     <a href="{{ .url }}" class="flex items-center justify-center bg-white px-8 py-4 w-44 h-20 rounded-xl shadow-sm border border-slate-150/40 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary/20 transition-all duration-200 flex-shrink-0" target="_blank" rel="noopener noreferrer" title="{{ .name }}" aria-hidden="true">
-                        <img src="{{ .logo | relURL }}" alt="" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
+                        <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
                     </a>
                 {{ end }}
             </div>

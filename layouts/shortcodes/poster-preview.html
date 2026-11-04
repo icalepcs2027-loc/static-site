@@ -80,7 +80,7 @@
     style="display: inline-block; padding: 0; border: 0; background: transparent; cursor: zoom-in;"
   >
     <img
-      src="{{ $src | relURL }}"
+      src="{{ $src | strings.TrimPrefix "/" | relURL }}"
       alt="{{ $alt }}"
       style="display: block; width: min({{ $thumbWidth }}, 64vw); height: auto; border-radius: 0.5rem; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);"
     >
@@ -106,7 +106,7 @@
       style="position: absolute; top: 0.5rem; right: 0.5rem; z-index: 1; width: 2.25rem; height: 2.25rem; border: 0; border-radius: 999px; background: #ffffff; color: #0f172a; font-size: 1.5rem; line-height: 1; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28); cursor: pointer;"
     >&times;</button>
     <img
-      src="{{ $src | relURL }}"
+      src="{{ $src | strings.TrimPrefix "/" | relURL }}"
       alt="{{ $alt }}"
       style="display: block; max-width: calc(100vw - 2rem); max-height: calc(100dvh - 6.5rem); width: auto; height: auto; border-radius: 0.5rem; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36); background: #ffffff;"
     >

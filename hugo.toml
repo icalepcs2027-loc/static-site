@@ -2,7 +2,7 @@
 # 1. サイトの基本設定 / Site Settings
 # ============================================================================
 
-baseURL = "https://test.icalepcs2027.org"
+baseURL = "https://icalepcs2027.org"
 locale = "en-us"
 title = "ICALEPCS2027 | The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
 

@@ -61,7 +61,7 @@
             <a href="{{ `/` | relURL }}" class="flex items-center">
                 {{ if .Site.Params.logo_image }}
                     <img
-                        src="{{ .Site.Params.logo_image | relURL }}"
+                        src="{{ .Site.Params.logo_image | strings.TrimPrefix "/" | relURL }}"
                         alt="{{ .Site.Params.conf_short_name }} Logo"
                         class="h-10 w-auto object-contain"
                     >
