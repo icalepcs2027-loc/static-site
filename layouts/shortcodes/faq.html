@@ -1,0 +1,16 @@
+{{ $page := .Page }}
+{{ with hugo.Data.faq }}
+    {{ with .intro }}{{ $page.RenderString (dict "display" "block") . }}{{ end }}
+    <div class="faq-container">
+        {{ range .sections }}
+            {{ if not .hidden }}
+                {{ $page.RenderString (printf "### %s" .title) }}
+                {{ range .items }}
+                    {{ if not .hidden }}
+                        {{ partial "accordion.html" (dict "title" .question "content" .answer) }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}

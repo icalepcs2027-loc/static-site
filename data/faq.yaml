@@ -1,0 +1,45 @@
+# Questions and answers are displayed in file order. Answers support Markdown.
+# Set hidden: true on an item or section to hide it.
+intro: >-
+  Find quick answers to common questions about abstract submission, registration, travel, and accommodation for ICALEPCS 2027.
+
+sections:
+  - title: "General & Abstracts"
+    items:
+      - question: "When and where will ICALEPCS 2027 take place?"
+        answer: |
+          ICALEPCS 2027 will be held from **October 4-8, 2027**, at the **Mito City Civic Center**, located in the Mito city, Ibaraki prefecture, Japan.
+           <!-- Satellite meetings and registration check-ins will commence on Sunday, June 4, 2028. -->
+
+      - question: "What is the deadline for abstract submission?"
+        hidden: true
+        answer: |
+          The abstract submission deadline is **December 5, 2027, 23:59 JST (UTC+9)**. To submit an abstract, you must log in to the JACoW Indico platform. No late abstracts will be accepted.
+
+      - question: "How many abstracts can I submit as a primary author?"
+        hidden: true
+        answer: |
+          Usually, an individual is limited to submitting **one abstract as the primary presenter**. You may be listed as a co-author on multiple abstracts.
+
+  - title: "Registration & Grants"
+    items:
+      - question: "When will registration open and what are the fees?"
+        answer: |
+          To be announced.
+          <!-- Registration is scheduled to open in **January 2028**. Early registration discounts will be available until **April 1, 2028**. Detailed registration tiers (Regular, Student, Exhibitor) will be announced shortly. -->
+
+      - question: "Are there grants available for students?"
+        answer: |
+          To be announced.
+          <!-- Yes, a robust Student Grant Program will be available to help cover registration fees, economy travel, and shared accommodation in Tokyo. Applications will open alongside registration and close in **February 2028**. -->
+
+  - title: "Visas & Travel"
+    items:
+      - question: "Do I need a visa to enter Japan?"
+        answer: |
+          For more information please refer to [visa information](/travel/visa).
+
+      - question: "Will the conference provide visa support letters?"
+        answer: |
+          To be announced.
+          <!-- Yes! The Local Organizing Committee will provide official visa support documentation (invitation letter, guarantee letter, etc.) *only* to registered and fully paid attendees, presenters, and exhibitors. -->

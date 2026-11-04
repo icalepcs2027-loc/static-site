@@ -49,6 +49,25 @@ footer_info:
     url: "/about/faq/"
 ```
 
+### FAQ
+
+Edit `data/faq.yaml` to manage the introduction, category headings, questions, and answers for `/about/faq/`. Entries appear in file order. Answers support Markdown; use `|` for multi-line text. Set `hidden: true` on a question or section to hide it, or omit the setting to display it.
+
+```yaml
+intro: "Find answers to common questions."
+sections:
+  - title: "General"
+    items:
+      - question: "Where will the conference take place?"
+        answer: |
+          The conference will take place in **Mito, Japan**.
+      - question: "When will registration open?"
+        hidden: true
+        answer: "To be announced."
+```
+
+The content page uses `{{< faq >}}`. FAQ items and the existing `accordion` shortcode share the same layout partial.
+
 ### Basic Conference Information
 
 Define the core metadata under the `[params]` namespace:
