@@ -1,5 +1,5 @@
 ---
-title: "Welcome to IPAC'28 in Tokyo"
+title: "Welcome to ICALEPCS 2027"
 url: "/about/about-welcome/"
 ---
 
