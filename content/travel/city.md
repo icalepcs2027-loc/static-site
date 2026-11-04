@@ -1,6 +1,6 @@
 ---
 title: "Getting to Tokyo"
-url: "/travel/travel-city/"
+url: "/travel/city/"
 embed_map_src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0475355609383!2d139.76189917637843!3d35.675782772588394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf0a071f45f%3A0x6ec0a2948e6c867a!2sTokyo%20International%20Forum!5e0!3m2!1sen!2sjp!4v1700000000000!5m2!1sen!2sjp"
 ---
 

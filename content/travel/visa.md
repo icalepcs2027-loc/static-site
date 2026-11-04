@@ -1,6 +1,6 @@
 ---
 title: "Visa Information"
-url: "/travel/travel-visa/"
+url: "/travel/visa/"
 ---
 
 Under Construction.

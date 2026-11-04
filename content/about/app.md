@@ -1,6 +1,6 @@
 ---
 title: "Mobile App"
-url: "/about/about-app/"
+url: "/about/app/"
 ---
 
 To maximize your conference experience, the official **ICALEPCS 2027 Mobile App** will be available as PWA (Progressive Web App).

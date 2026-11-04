@@ -39,7 +39,7 @@ conf_dates = "October 4-8, 2027"
 conf_start_date = "2027-10-04T08:00:00+09:00"
 conf_location = "Mito Civic Senter, Ibaraki, Japan"
 email = "contact@icalepcs2027.org"
-registration_link = "/register/register-conf/"
+registration_link = "/register/conference/"
 
 # ---------------------------------------------------------------------------
 # トップページの画像・表示切り替え / Appearance & Toggles
@@ -60,9 +60,9 @@ stats.exhibitors = "80+"
 # ---------------------------------------------------------------------------
 enable_announcement = true
 # announcement_text = "Abstract submission will open on Oct 1, 2027!"
-# announcement_link = "/authors/authors-abstract/"
+# announcement_link = "/authors/abstract/"
 announcement_text = "Welcome to the ICALEPCS 2027 Website!"
-announcement_link = "/about/about-welcome/"
+announcement_link = "/about/welcome/"
 
 # ---------------------------------------------------------------------------
 # 日付の表示形式 / Date Format

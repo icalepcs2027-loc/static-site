@@ -1,6 +1,6 @@
 ---
 title: "Exhibitor Registration"
-url: "/exhibitor/exhibitor-register/"
+url: "/exhibitor/register/"
 ---
 
 The exhibitor registration for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.
@@ -21,6 +21,6 @@ Industrial exhibition booths booking for **ICALEPCS 2027** will launch on **late
 ---
 
 ### Registration Procedures
-1. Read the **[Exhibitor Opportunities & Prospectus](/exhibitor-info/)** carefully.
+1. Read the **[Exhibitor Opportunities & Prospectus](/exhibitor/info/)** carefully.
 2. Open the online Exhibitor Portal, select your preferred booth number on the floor plan map, and fill in company contact details.
 3. Submit full payment within 30 days to secure booking. Booth bookings are automatically canceled if payment terms are violated. Exhibition regulations and insurance agreements are `To be added`. -->

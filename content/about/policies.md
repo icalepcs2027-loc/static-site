@@ -1,6 +1,6 @@
 ---
 title: "Policies & Code of Conduct"
-url: "/about/about-policies/"
+url: "/about/policies/"
 ---
 
 ## Policies

@@ -1,6 +1,6 @@
 ---
 title: "Poster Guidelines"
-url: "/authors/authors-poster/"
+url: "/authors/poster/"
 ---
 
 To be announced.

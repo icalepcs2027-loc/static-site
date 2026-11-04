@@ -1,6 +1,6 @@
 ---
 title: "Submit Abstract"
-url: "/authors/authors-abstract/"
+url: "/authors/abstract/"
 ---
 
 To be announced.

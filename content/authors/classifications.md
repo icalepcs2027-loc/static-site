@@ -1,6 +1,6 @@
 ---
 title: "Abstract Classifications"
-url: "/authors/authors-classifications/"
+url: "/authors/classifications/"
 ---
 
 To be announced.

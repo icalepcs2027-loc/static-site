@@ -1,6 +1,6 @@
 ---
 title: "Accommodation"
-url: "/travel/travel-accommodation/"
+url: "/travel/accommodation/"
 ---
 
 To be announced.

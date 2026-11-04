@@ -1,6 +1,6 @@
 ---
 title: "Ongoing Accelerator Projects"
-url: "/exhibitor/exhibitor-project/"
+url: "/exhibitor/project/"
 ---
 
 The exhibitor and sponsor information for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.

@@ -1,6 +1,6 @@
 ---
 title: "Conference Poster"
-url: "/about/about-poster/"
+url: "/about/poster/"
 ---
 
 To be announced.

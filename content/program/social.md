@@ -1,6 +1,6 @@
 ---
 title: "Social Events"
-url: "/program/program-social/"
+url: "/program/social/"
 ---
 
 To be announced.

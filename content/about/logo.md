@@ -1,6 +1,6 @@
 ---
 title: "Conference Logo"
-url: "/about/about-logo/"
+url: "/about/logo/"
 ---
 
 To be announced.

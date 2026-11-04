@@ -1,6 +1,6 @@
 ---
 title: "Exhibitor & Sponsor Prospectus"
-url: "/exhibitor/exhibitor-info/"
+url: "/exhibitor/info/"
 ---
 
 The exhibitor and sponsor information for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.

@@ -1,6 +1,6 @@
 ---
 title: "Presentation Guidelines"
-url: "/authors/authors-presentation/"
+url: "/authors/presentation/"
 ---
 
 To be announced.

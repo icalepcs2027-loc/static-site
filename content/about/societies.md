@@ -1,6 +1,6 @@
 ---
 title: "Sponsoring Societies"
-url: "/about/about-societies/"
+url: "/about/societies/"
 ---
 
 <!-- IPAC'28 is officially sponsored and hosted by several leading global physical societies and engineering councils. We express our deepest gratitude for their scientific oversight and administrative support. -->

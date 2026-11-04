@@ -1,6 +1,6 @@
 ---
 title: "Scientific Program"
-url: "/program/program-scientific"
+url: "/program/scientific/"
 ---
 
 To be announced.

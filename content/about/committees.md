@@ -1,6 +1,6 @@
 ---
 title: "Committees"
-url: "/about/about-committees/"
+url: "/about/committees/"
 ---
 
 {{< committees-list >}}

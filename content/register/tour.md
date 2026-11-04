@@ -1,6 +1,6 @@
 ---
 title: "Technical Tour"
-url: "/register/register-tour/"
+url: "/register/tour/"
 ---
 
 To be announced.

@@ -1,6 +1,6 @@
 ---
 title: "Venue"
-url: "/travel/travel-venue/"
+url: "/travel/venue/"
 ---
 
 Under Construction

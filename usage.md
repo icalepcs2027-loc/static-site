@@ -28,9 +28,9 @@ main:
     url: "/about/"
     children:
       - name: "Welcome Address"
-        url: "/about-welcome/"
+        url: "/welcome/"
       - name: "Committees"
-        url: "/about-committees/"
+        url: "/committees/"
       - name: "External Information"
         url: "https://example.org/"
         new_tab: true
@@ -46,7 +46,7 @@ footer_quick:
 
 footer_info:
   - name: "FAQ"
-    url: "/about/about-faq/"
+    url: "/about/faq/"
 ```
 
 ### Basic Conference Information
@@ -61,7 +61,7 @@ Define the core metadata under the `[params]` namespace:
   conf_start_date = "2028-06-05T08:00:00+09:00"  # Targets the homepage countdown timer
   conf_location = "Tokyo International Forum, Tokyo, Japan"
   email = "contact@ipac28.org"
-  registration_link = "/register/register-conf/"
+  registration_link = "/register/conference/"
 ```
 
 ### Branding Logos and Toggles
@@ -101,7 +101,7 @@ Renders a dismissible banner at the top of the header:
 ```toml
   enable_announcement = true
   announcement_text = "Abstract submission will open on Oct 1, 2027!"
-  announcement_link = "/about/about-welcome/"
+  announcement_link = "/about/welcome/"
 ```
 
 ### Important Dates Database
@@ -144,7 +144,7 @@ Edit `data/news.yaml`. The three newest entries will display featured preview ca
 - date: "2026-05-15T00:00:00+09:00"
   title: "Exhibitor Prospectus Now Available"
   summary: "The exhibitor and sponsorship prospectus for IPAC'28 is now available..."
-  link: "/exhibitor/exhibitor-info/"
+  link: "/exhibitor/info/"
 ```
 
 ### Tiered Sponsors

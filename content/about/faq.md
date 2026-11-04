@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions (FAQ)"
-url: "/about/about-faq/"
+url: "/about/faq/"
 ---
 
 Find quick answers to common questions about abstract submission, registration, travel, and accommodation for ICALEPCS 2027.
@@ -38,7 +38,7 @@ To be announced.
 
 {{< accordion title="Do I need a visa to enter Japan?" >}}
 
-For more information please refer to [visa information](/travel/travel-visa).
+For more information please refer to [visa information](/travel/visa).
 
 {{< /accordion >}}
 

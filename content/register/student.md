@@ -1,6 +1,6 @@
 ---
 title: "Student Grants"
-url: "/register/register-student"
+url: "/register/student/"
 ---
 
 To be announced.

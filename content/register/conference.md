@@ -1,6 +1,6 @@
 ---
 title: "Conference Registration"
-url: "/register/register-conf/"
+url: "/register/conference/"
 ---
 
 To be announced.

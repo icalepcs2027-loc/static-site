@@ -2,14 +2,14 @@
 - date: "2026-12-01T00:00:00+09:00"
   title: "ICALEPCS 2027 Website Is Now Open"
   summary: "The official ICALEPCS 2027 conference website has launched. Find information on the scientific program, registration, venue, and more."
-  link: "/about/about-welcome/"
+  link: "/about/welcome/"
 
 # - date: "2026-05-01T00:00:00+09:00"
 #   title: "Call for Abstracts: Coming Soon"
 #   summary: "Abstract submission will open in October 2027 via the JACoW Indico portal. Authors are encouraged to prepare their contributions in advance."
-#   link: "/authors/authors-abstract/"
+#   link: "/authors/abstract/"
 
 # - date: "2026-05-15T00:00:00+09:00"
 #   title: "Exhibitor Prospectus Now Available"
 #   summary: "The exhibitor and sponsorship prospectus for ICALEPCS 2027 is now available for download. Secure prime booth space early — allocation is first-come, first-served."
-#   link: "/exhibitor/exhibitor-info/"
+#   link: "/exhibitor/info/"

@@ -1,6 +1,6 @@
 ---
 title: "Welcome to ICALEPCS 2027"
-url: "/about/about-welcome/"
+url: "/about/welcome/"
 ---
 
 To be added.

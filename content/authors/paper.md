@@ -1,6 +1,6 @@
 ---
 title: "Paper Preparation Guidelines"
-url: "/authors/authors-paper/"
+url: "/authors/paper/"
 ---
 
 To be announced.
