@@ -65,46 +65,59 @@ Renders a dismissible banner at the top of the header:
 
 ### Important Dates Database
 
-Configures the milestones listed in the dynamic timeline page.
+Edit the milestones in `data/schedules/important_dates.yaml`. The homepage and timeline shortcode both read this data; their layout remains in `layouts/`. Date display formatting is controlled by `params.date_fmt` in `hugo.toml`.
 
 * **type options**: `"info"` (blue bubble), `"open"` (green bubble), `"close"` (red bubble for deadlines).
-* **season** (optional): If configured as a string (e.g. `"Late Summer, 2027"`), the template displays this value in place of the specific date. The `date` parameter must still be present to govern sorting and automatic expiration styling.
+* **date** (optional): Omit it, leave it empty, or use `null` for an undecided date. The date label becomes "To be announced" and the badge becomes "TBD" regardless of `type`. A specified date must be a valid timestamp, not the string "TBD".
+* **hidden** (optional): Set `hidden: true` to exclude an entry from both the homepage and full timeline. Omit it or set `hidden: false` to display it.
+* **order** (optional): An integer specifying display priority; smaller numbers come first, including `0` and negative numbers. Entries without `order` (or with `order: null`) follow ordered entries, with dated entries sorted chronologically and undecided entries in file order. `hidden: true` still takes precedence.
+* **season** (optional): If configured as a string (e.g. `"Late Summer, 2027"`), the template displays this value instead of the date label, including for undecided dates.
 * Past dates are marked automatically as outdated based on the build timestamp.
+* The homepage uses the same display order and shows the first three upcoming/undecided entries; if none exist, it shows the last three visible past entries.
 
-```toml
-[[params.important_dates]]
-  date = "2027-12-30T23:59:59+09:00"
-  season = "Late Summer, 2027" # optional
-  title = "Abstract Submission Deadline"
-  type = "close"
-  description = "Abstract submission closes strictly at 23:59 JST. No late submissions accepted."
+```yaml
+- date: "2027-12-30T23:59:59+09:00"
+  order: 10
+  season: "Late Summer, 2027" # optional
+  title: "Abstract Submission Deadline"
+  type: "close"
+  description: "Abstract submission closes strictly at 23:59 JST. No late submissions accepted."
+
+# Undecided date
+- title: "Registration Opens"
+  type: "open"
+  description: "Details will be announced soon."
+
+# Hidden entry
+- date: "2027-06-01T09:00:00+09:00"
+  title: "Technical Tour"
+  type: "info"
+  hidden: true
 ```
 
 ### News and Announcements Feed
 
-The three newest entries will display featured preview cards on the homepage:
+Edit `data/news.yaml`. The three newest entries will display featured preview cards on the homepage:
 
-```toml
-[[params.news]]
-  date = "2026-05-15T00:00:00+09:00"
-  title = "Exhibitor Prospectus Now Available"
-  summary = "The exhibitor and sponsorship prospectus for IPAC'28 is now available..."
-  link = "/exhibitor/exhibitor-info/"
+```yaml
+- date: "2026-05-15T00:00:00+09:00"
+  title: "Exhibitor Prospectus Now Available"
+  summary: "The exhibitor and sponsorship prospectus for IPAC'28 is now available..."
+  link: "/exhibitor/exhibitor-info/"
 ```
 
 ### Tiered Sponsors
 
-Renders sponsor graphics grouped by hierarchy tiers:
+Edit `data/sponsors.yaml`. The `sponsors-grid` shortcode renders sponsor graphics grouped by hierarchy tiers. The homepage reads the same data; its sponsor section is controlled by `params.enable_sponsors` in `hugo.toml`.
 
 * **tier options**: `"platinum"`, `"gold"`, `"silver"`, `"bronze"`, `"supporter"`.
 
-```toml
-[[params.sponsors]]
-  name = "Quantum Dynamics Corp."
-  logo = "/img/ipac28_600x304.png"
-  url = "https://example.com/quantum-dynamics"
-  tier = "platinum"
-  tagline = "Pioneering the next generation of particle accelerator power systems."
+```yaml
+- name: "Quantum Dynamics Corp."
+  logo: "/img/ipac28_600x304.png"
+  url: "https://example.com/quantum-dynamics"
+  tier: "platinum"
+  tagline: "Pioneering the next generation of particle accelerator power systems."
 ```
 
 ### Organizing Committees
@@ -134,7 +147,7 @@ Include these components directly inside any page content Markdown file.
 
 #### timelines (`full-dates-timeline`)
 
-Renders the timeline compiled dynamically from `[[params.important_dates]]`.
+Renders the timeline from the YAML list in `data/schedules/important_dates.yaml` (`hugo.Data.schedules.important_dates`).
 
 ```markdown
 {{< full-dates-timeline >}}

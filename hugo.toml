@@ -1,15 +1,38 @@
+# ============================================================================
+# 1. サイトの基本設定 / Site Settings
+# ============================================================================
+
 baseURL = "https://test.icalepcs2027.org"
 locale = "en-us"
 title = "ICALEPCS2027 | The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
 
+# ============================================================================
+# 2. Markdownの描画設定 / Markdown Rendering
+# ============================================================================
+# unsafe: Markdown本文に含まれるHTMLを出力します。
+
 [markup.goldmark.renderer]
 unsafe = true
 
+# ============================================================================
+# 3. 大会情報とトップページ / Conference & Homepage
+# ============================================================================
 [params]
+
+# ---------------------------------------------------------------------------
+# ロゴ・ファビコン / Branding
+# ---------------------------------------------------------------------------
+# logo_image が指定されている場合は画像を使用します。
+# logo_prefix / logo_suffix は文字ロゴ用です。
 logo_prefix = "ICALEPCS"
 logo_suffix = "2027"
 logo_image = "/img/ICALEPCS2027_logo.png"
 favicon = "/img/ICALEPCS2027_logo.png"
+
+# ---------------------------------------------------------------------------
+# 大会名・開催日時・連絡先 / Conference Details
+# ---------------------------------------------------------------------------
+# conf_start_date はカウントダウンの基準日時です（タイムゾーン付き）。
 conf_short_name = "ICALEPCS 2027"
 conf_full_name = "The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
 conf_dates = "October 4-8, 2027"
@@ -18,201 +41,62 @@ conf_location = "Mito Civic Senter, Ibaraki, Japan"
 email = "contact@icalepcs2027.org"
 registration_link = "/register/register-conf/"
 
-# Appearance & Toggles
+# ---------------------------------------------------------------------------
+# トップページの画像・表示切り替え / Appearance & Toggles
+# ---------------------------------------------------------------------------
+# hero_image: 冒頭のポスター画像
+# enable_*: 各セクションを表示する場合は true、非表示は false。
 hero_badge = "The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
-hero_image = "/img/ipac28_poster.png"
-about_image = "/img/kanko.png"
+hero_image = "/img/ICALEPCS2027_Poster.png"
 enable_countdown = true
-enable_sponsors = false
+# 統計表示（手動入力）：参加者数 / 発表件数 / 出展者数
 enable_stats = false
+stats.attendees = "1200+"
+stats.presentations = "800+"
+stats.exhibitors = "80+"
 
-# Global Announcement Banner
+# ---------------------------------------------------------------------------
+# 上部のお知らせバナー / Announcement Banner
+# ---------------------------------------------------------------------------
 enable_announcement = true
 # announcement_text = "Abstract submission will open on Oct 1, 2027!"
 # announcement_link = "/authors/authors-abstract/"
 announcement_text = "Welcome to the ICALEPCS 2027 Website!"
 announcement_link = "/about/about-welcome/"
 
-# Global date formatting style for all pages (standard Go layout)
+# ---------------------------------------------------------------------------
+# 日付の表示形式 / Date Format
+# ---------------------------------------------------------------------------
+# Goの基準日時の書式を使用します。日程そのものの設定ではありません。
 date_fmt = "January 2, 2006"
 
-# Centralized Important Dates & Milestones (Clean multi-line arrays for easy editing)
-[[params.important_dates]]
-date = "2026-07-01T00:00:00+09:00"
-title = "IPAC'28 Website Opening"
-type = "info"
-description = "The IPAC'28 Website has been opened. We have prepared the contents of the homepage including program, registration, and venue information."
+# 日程データ: data/schedules/important_dates.yaml
+# 委員会データ: data/committees/*.yaml
 
-# 2027 spring
-[[params.important_dates]]
-date = "2027-04-01T00:00:00+09:00"
-season = "Spring, 2027"
-title = "Exhibitor Registration Opens"
-type = "open"
-description = "Exhibitor registration opens"
+# ============================================================================
+# 4. ニュース・更新情報 / News & Announcements
+# ============================================================================
+# トップページに日付の新しい順で最大3件を表示します。
+# ニュースデータ: data/news.yaml
 
-# 2027 summber
-[[params.important_dates]]
-date = "2027-09-30T23:59:59+09:00"
-season = "Late Summer, 2027"
-title = "Abstract Submission Opens"
-type = "open"
-description = "Abstract submission opens"
+# ============================================================================
+# 5. スポンサー / Sponsors & Industry Partners
+# ============================================================================
+# トップページへの表示は enable_sponsors で切り替えます。
+# スポンサーデータ: data/sponsors.yaml
+enable_sponsors = true
 
-# 2027 summber
-[[params.important_dates]]
-date = "2027-10-01T00:00:00+09:00"
-season = "Late Summer, 2027"
-title = "Early Registration Opens"
-type = "open"
-description = "Early registration opens"
-
-[[params.important_dates]]
-date = "2027-10-01T00:00:00+09:00"
-season = "Late Summer, 2027"
-title = "Student Grant Opens"
-type = "open"
-description = "Student grant applications open. "
-
-# 2027 winter
-[[params.important_dates]]
-date = "2027-12-30T23:59:59+09:00"
-season = "Late winter, 2027"
-title = "Abstract Submission Close"
-type = "close"
-description = "Abstract submission closes strictly at 23:59 JST. No late submissions or modifications will be processed."
-
-# 2027 early dec
-[[params.important_dates]]
-date = "2027-12-10T09:00:00+09:00"
-season = "Winter, 2027"
-title = "Student Grant Close"
-type = "close"
-description = "Student grant applications close. "
-
-# winter
-[[params.important_dates]]
-date = "2028-03-31T23:59:59+09:00"
-season = "Spring, 2028"
-title = "Early Registration Closes"
-type = "close"
-description = "Last day to register under the discounted early-bird rate."
-
-[[params.important_dates]]
-date = "2028-01-10T09:00:00+09:00"
-season = "Spring, 2028"
-title = "Author Notification"
-type = "info"
-description = "Abstract decisions (Oral, Poster, or Rejection) are communicated to primary authors. "
-
-[[params.important_dates]]
-date = "2028-04-01T09:00:00+09:00"
-season = "Spring, 2028"
-title = "Regular Registration Opens"
-type = "open"
-description = "Regular registration opens."
-
-[[params.important_dates]]
-date = "2028-04-30T23:59:59+09:00"
-season = "Late Spring, 2028"
-title = "Regular Registration Closes"
-type = "close"
-description = "Regular registration closes."
-
-[[params.important_dates]]
-date = "2028-05-31T23:59:59+09:00"
-season = "Late Spring, 2028"
-title = "Final Paper Submission Close"
-type = "close"
-description = "All contributions must upload their final PDF and source files (LaTeX/Word) to the JACoW Scientific Repository for editorial checks."
-
-[[params.important_dates]]
-date = "2028-06-03T18:00:00+09:00"
-title = "Welcome Drink"
-type = "info"
-description = "Registration desk opens at the Tokyo International Forum."
-
-[[params.important_dates]]
-date = "2028-06-04T08:00:00+09:00"
-title = "IPAC'28 Scientific Program"
-type = "info"
-description = "Timetable sessions, plenary keynotes, parallel talks, commercial exhibitions, and the official social banquet."
-
-# Latest Updates & Announcements (shown on homepage, newest 3 displayed)
-[[params.news]]
-date = "2026-07-01T00:00:00+09:00"
-title = "IPAC'28 Website Is Now Open"
-summary = "The official IPAC'28 conference website has launched. Find information on the scientific program, registration, venue, and more."
-link = "/about/about-welcome/"
-
-# [[params.news]]
-# date = "2026-05-01T00:00:00+09:00"
-# title = "Call for Abstracts: Coming Soon"
-# summary = "Abstract submission will open in October 2027 via the JACoW Indico portal. Authors are encouraged to prepare their contributions in advance."
-# link = "/authors/authors-abstract/"
-
-# [[params.news]]
-# date = "2026-05-15T00:00:00+09:00"
-# title = "Exhibitor Prospectus Now Available"
-# summary = "The exhibitor and sponsorship prospectus for IPAC'28 is now available for download. Secure prime booth space early — allocation is first-come, first-served."
-# link = "/exhibitor/exhibitor-info/"
-
-# Sponsors & Industry Partners
-# Fields:
-#   name     (required) Display name of the sponsor
-#   logo     (required) Path to logo image under /static (e.g. /img/logo.png)
-#   url      (required) Official website URL (opens in new tab)
-#   tier     (optional) Sponsorship tier: "platinum" | "gold" | "silver" | "bronze" | "supporter"
-#   tagline  (optional) Short one-line description shown on the sponsors sub-page
-[[params.sponsors]]
-name = "Quantum Dynamics Corp."
-logo = "/img/ipac28_600x304.png"
-url = "https://example.com/quantum-dynamics"
-tier = "platinum"
-tagline = "Pioneering the next generation of particle accelerator power systems."
-
-[[params.sponsors]]
-name = "NanoBeam Technologies"
-logo = "/img/ipac28_600x304.png"
-url = "https://example.com/nanobeam"
-tier = "platinum"
-tagline = "Precision beam diagnostics and control systems for modern accelerators."
-
-[[params.sponsors]]
-name = "FusionEdge Solutions"
-logo = "/img/ipac28_600x304.png"
-url = "https://example.com/fusionedge"
-tier = "gold"
-tagline = "Advanced RF and microwave components for high-energy physics research."
-
-[[params.sponsors]]
-name = "Acceleron Instruments"
-logo = "/img/ipac28_600x304.png"
-url = "https://example.com/acceleron"
-tier = "gold"
-tagline = "Vacuum technology and ultra-high vacuum solutions for research facilities."
-
-[[params.sponsors]]
-name = "Helios Superconductors"
-logo = "/img/ipac28_600x304.png"
-url = "https://example.com/helios-sc"
-tier = "silver"
-tagline = "Superconducting magnet systems and cryogenic infrastructure."
-
-[[params.sponsors]]
-name = "Synchrotron Systems Ltd."
-logo = "/img/ipac28_600x304.png"
-url = "https://example.com/synchrotron-sys"
-tier = "silver"
-tagline = "Turn-key synchrotron light source solutions worldwide."
-
-# Note: Committee members are managed in data/committees/*.yaml
-
+# ============================================================================
+# 6. フォント・テーマカラー / Typography & Colors
+# ============================================================================
+# カラー設定はHugoのビルドで反映されます。
 [params.text_style]
 font_size = "0.95rem"
 line_height = "1.65"
 font_family = "Inter"
 heading_font_family = "Montserrat"
+
+# 本文・見出し・リンクとボタン・鮮やかなアクセント・ホバー・背景の色
 body_color = "#3d5964"
 heading_color = "#155e75"
 link_color = "#007da6"
@@ -221,17 +105,24 @@ primary_hover_color = "#006480"
 dark_color = "#083344"
 light_background_color = "#effbff"
 
+# ============================================================================
+# 7. SNSリンク / Social Links
+# ============================================================================
+# 使用する設定例のコメントを外し、URLを変更してください。
 [params.social]
 # twitter = "https://twitter.com/IPAC28"
 # linkedin = "https://linkedin.com/company/ipac28"
 # facebook = "https://facebook.com/ipac28"
 
-[params.stats]
-attendees = "1200+"
-presentations = "800+"
-exhibitors = "80+"
+# ============================================================================
+# 8. 上部ナビゲーション / Header Navigation
+# ============================================================================
+# weight が小さい項目から表示されます。
+# parent には親メニューの identifier を指定します。
 
-# ----- 1. About -----
+# ---------------------------------------------------------------------------
+# 1. About
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "About"
 identifier = "about"
@@ -285,7 +176,9 @@ url = "/about/about-faq/"
 parent = "about"
 weight = 80
 
-# ----- 2. Program -----
+# ---------------------------------------------------------------------------
+# 2. Program
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "Program"
 identifier = "program"
@@ -333,7 +226,9 @@ url = "/program/satellite/"
 parent = "program"
 weight = 70
 
-# ----- 3. Registration -----
+# ---------------------------------------------------------------------------
+# 3. Registration
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "Registration"
 identifier = "registration"
@@ -357,7 +252,9 @@ url = "/register/register-tour/"
 parent = "registration"
 weight = 30
 
-# ----- 4. Authors -----
+# ---------------------------------------------------------------------------
+# 4. Authors
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "Authors"
 identifier = "authors"
@@ -393,7 +290,9 @@ url = "/authors/authors-poster/"
 parent = "authors"
 weight = 50
 
-# ----- 5. Exhibitor -----
+# ---------------------------------------------------------------------------
+# 5. Exhibitor
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "Exhibitor"
 identifier = "exhibitor"
@@ -423,7 +322,9 @@ url = "/exhibitor/exhibitor-project/"
 parent = "exhibitor"
 weight = 40
 
-# ----- 6. Travel -----
+# ---------------------------------------------------------------------------
+# 6. Travel
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "Travel"
 identifier = "travel"
@@ -453,16 +354,22 @@ url = "/travel/travel-visa/"
 parent = "travel"
 weight = 30
 
-# ----- 7. Contact -----
+# ---------------------------------------------------------------------------
+# 7. Contact
+# ---------------------------------------------------------------------------
 [[menu.main]]
 name = "Contact"
 url = "/contact/"
 weight = 70
 
-# ==========================================
-# FOOTER NAVIGATION MENUS
-# ==========================================
+# ============================================================================
+# 9. フッターナビゲーション / Footer Navigation
+# ============================================================================
+# 各グループ内では weight が小さい項目から表示されます。
 
+# ---------------------------------------------------------------------------
+# クイックリンク / Quick Links
+# ---------------------------------------------------------------------------
 [[menu.footer_quick]]
 name = "Welcome Address"
 url = "/about/about-welcome/"
@@ -488,6 +395,9 @@ name = "Organizing Committees"
 url = "/about/about-committees/"
 weight = 50
 
+# ---------------------------------------------------------------------------
+# ご案内リンク / Information Links
+# ---------------------------------------------------------------------------
 [[menu.footer_info]]
 name = "Registration Fees"
 url = "/register/register-conf/"

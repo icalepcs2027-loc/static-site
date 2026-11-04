@@ -1,4 +1,4 @@
-{{ $allSponsors := .Site.Params.sponsors }}
+{{ $allSponsors := hugo.Data.sponsors }}
 {{ $tiers := slice "platinum" "gold" "silver" "bronze" "supporter" }}
 
 {{ $tierLabels := dict

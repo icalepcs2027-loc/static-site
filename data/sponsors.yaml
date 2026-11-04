@@ -1,0 +1,12 @@
+# スポンサー一覧（トップページの表示は hugo.toml の enable_sponsors で切り替え）
+# name / logo / url: 必須、tier / tagline: 任意
+# tier: platinum / gold / silver / bronze / supporter
+# logo は static/ 以下の画像を /img/... の形式で指定します。
+
+
+- name: "Dummy Test Sample Co.ltd."
+  logo: "/img/ipac28_600x304.png"
+  url: "https://www.kek.jp"
+  tier: "platinum"
+  tagline: "The dummy sponsor."
+

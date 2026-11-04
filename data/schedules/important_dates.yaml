@@ -1,0 +1,111 @@
+# Centralized Important Dates & Milestones (Clean multi-line arrays for easy editing)
+# Omit date (or use date: "" / date: null) for To be announced / TBD.
+# Use hidden: true to exclude an entry from both the homepage and timeline.
+# Use order: 10, 20, ... to set display order (smaller numbers first).
+
+#- date: "2026-12-01T00:00:00+09:00"
+- date: ""
+  order: 10
+  title: "ICALEPCS 2027 Website Opening"
+  type: "info"
+  description: "The ICALEPCS 2027 Website has been opened. We have prepared the contents of the homepage including program, registration, and venue information."
+
+# 2027 spring
+- date: ""
+  order: 20
+  hidden: false
+  season: ""
+  title: "Exhibitor Registration Opens"
+  type: "open"
+  description: "Exhibitor registration opens"
+
+# 2027 summber
+- date: ""
+  order: 30
+  hidden: false
+  season: ""
+  title: "Abstract Submission Opens"
+  type: "open"
+  description: "Abstract submission opens"
+
+# 2027 summber
+- date: ""
+  order: 40
+  hidden: false
+  season: ""
+  title: "Early Registration Opens"
+  type: "open"
+  description: "Early registration opens"
+
+- date: ""
+  order: 50
+  hidden: true
+  season: ""
+  title: "Student Grant Opens"
+  type: "open"
+  description: "Student grant applications open. "
+
+# 2027 winter
+- date: ""
+  order: 60
+  hidden: false
+  season: ""
+  title: "Abstract Submission Close"
+  type: "close"
+  description: "Abstract submission closes strictly at 23:59 JST. No late submissions or modifications will be processed."
+
+# 2027 early dec
+- date: ""
+  order: 70
+  hidden: true
+  season: ""
+  title: "Student Grant Close"
+  type: "close"
+  description: "Student grant applications close. "
+
+# winter
+- date: ""
+  order: 80
+  hidden: false
+  season: ""
+  title: "Early Registration Closes"
+  type: "close"
+  description: "Last day to register under the discounted early-bird rate."
+
+- date: ""
+  order: 90
+  hidden: true
+  season: ""
+  title: "Author Notification"
+  type: "info"
+  description: "Abstract decisions (Oral, Poster, or Rejection) are communicated to primary authors. "
+
+- date: ""
+  order: 100
+  hidden: true
+  season: ""
+  title: "Regular Registration Opens"
+  type: "open"
+  description: "Regular registration opens."
+
+- date: ""
+  order: 110
+  hidden: true
+  season: ""
+  title: "Regular Registration Closes"
+  type: "close"
+  description: "Regular registration closes."
+
+- date: ""
+  order: 120
+  hidden: true
+  season: ""
+  title: "Final Paper Submission Close"
+  type: "close"
+  description: "All contributions must upload their final PDF and source files (LaTeX/Word) to the JACoW Scientific Repository for editorial checks."
+
+- date: "2027-10-04T08:00:00+09:00"
+  order: 130
+  title: "ICALEPCS 2027 Scientific Program"
+  type: "info"
+  description: "Timetable sessions, plenary keynotes, parallel talks, commercial exhibitions, and the official social banquet."

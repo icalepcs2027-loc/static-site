@@ -1,16 +1,16 @@
 <div class="relative border-l border-slate-200 dark:border-slate-800 ml-4 pl-8 space-y-12 my-8">
-    {{ range sort .Site.Params.important_dates "date" "asc" }}
-    <!-- Check if the milestone is in the past relative to the current build time -->
-    {{ $is_expired := false }}
-    {{ if lt (time .date) now }}
-        {{ $is_expired = true }}
-    {{ end }}
+    {{ $schedule := partial "schedules/important-dates.html" (dict "items" hugo.Data.schedules.important_dates "now" now) }}
+    {{ range $schedule.all }}
+    {{ $entry := . }}
+    {{ with .event }}
 
     <!-- Determine Badge Text and Badge Class -->
     {{ $badge_class := "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800/50" }}
     {{ $badge_label := "Info" }}
 
-    {{ if $is_expired }}
+    {{ if $entry.pending }}
+        {{ $badge_label = "TBD" }}
+    {{ else if $entry.expired }}
         {{ $badge_class = "bg-slate-100 text-slate-500 border-slate-200 dark:bg-slate-800 dark:text-slate-500 dark:border-slate-700 line-through" }}
         {{ $badge_label = "Expired" }}
     {{ else }}
@@ -26,9 +26,6 @@
         {{ end }}
     {{ end }}
 
-    <!-- Date formatting based on user-defined date_fmt in hugo.toml -->
-    {{ $formatted_date := (time .date).Format (site.Params.date_fmt | default "January 2, 2006") }}
-
     <div class="relative group">
         <!-- Timeline dot indicator -->
         <div class="absolute -left-[39px] top-1.5 w-[14px] h-[14px] rounded-full bg-white dark:bg-slate-900 border-[3px] border-brand-primary shadow-sm transition-transform duration-200 group-hover:scale-125 z-10"></div>
@@ -36,7 +33,7 @@
         <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow duration-200">
             <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
                 <span class="text-sm font-bold text-brand-primary flex items-center gap-2">
-                    <i class="far fa-calendar-check"></i> {{ if .season }}{{ .season }}{{ else }}{{ $formatted_date }}{{ end }}
+                    <i class="far fa-calendar-check"></i> {{ $entry.date_label }}
                 </span>
                 <span class="px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider border {{ $badge_class }}">
                     {{ $badge_label }}
@@ -48,5 +45,6 @@
             </div>
         </div>
     </div>
+    {{ end }}
     {{ end }}
 </div>

@@ -103,9 +103,9 @@
 <!-- About Section -->
 <section id="about" class="py-24 bg-white">
     <div class="container">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <!-- Left text block -->
-            <div class="lg:col-span-7 fade-up visible">
+        <div>
+            <!-- Introduction text -->
+            <div class="fade-up visible">
                 <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-6 pb-4 relative after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-brand-primary after:rounded-full">
                     Welcome to {{ .Site.Params.conf_short_name }} !
                 </h2>
@@ -133,14 +133,6 @@
                 </div>
                 {{ end }}
             </div>
-            
-            <!-- Right image wrapper -->
-            <div class="lg:col-span-5 fade-up visible delay-1">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 to-transparent z-10 pointer-events-none"></div>
-                    <img src="{{ .Site.Params.about_image | relURL }}" alt="Tokyo Host City" class="w-full h-auto object-cover rounded-2xl transform group-hover:scale-105 transition duration-500">
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -154,34 +146,26 @@
         </div>
 
         <div class="max-w-2xl mx-auto mb-12">
-            {{ $now := now }}
-            {{ $future_dates := slice }}
-
-            {{ range .Site.Params.important_dates }}
-                {{ $item_time := time .date }}
-                {{ if ge $item_time $now }}
-                    {{ $future_dates = $future_dates | append . }}
-                {{ end }}
-            {{ end }}
+            {{ $schedule := partial "schedules/important-dates.html" (dict "items" hugo.Data.schedules.important_dates "now" now) }}
 
             {{ $dates_to_show := slice }}
-            {{ if gt (len $future_dates) 0 }}
-                {{ $dates_to_show = first 3 $future_dates }}
+            {{ if gt (len $schedule.upcoming) 0 }}
+                {{ $dates_to_show = first 3 $schedule.upcoming }}
             {{ else }}
-                {{ $dates_to_show = last 3 .Site.Params.important_dates }}
+                {{ $dates_to_show = last 3 $schedule.all }}
             {{ end }}
 
             <div class="relative border-l border-slate-200 ml-4 pl-8 space-y-12">
                 {{ range $dates_to_show }}
-                    {{ $is_expired := false }}
-                    {{ if lt (time .date) $now }}
-                        {{ $is_expired = true }}
-                    {{ end }}
+                    {{ $entry := . }}
+                    {{ with .event }}
 
                     {{ $badge_class := "bg-blue-50 text-blue-700 border-blue-200" }}
                     {{ $badge_label := "Info" }}
 
-                    {{ if $is_expired }}
+                    {{ if $entry.pending }}
+                        {{ $badge_label = "TBD" }}
+                    {{ else if $entry.expired }}
                         {{ $badge_class = "bg-slate-100 text-slate-500 border-slate-200 line-through" }}
                         {{ $badge_label = "Expired" }}
                     {{ else }}
@@ -194,8 +178,6 @@
                         {{ end }}
                     {{ end }}
 
-                    {{ $formatted_date := (time .date).Format (site.Params.date_fmt | default "January 2, 2006") }}
-
                     <div class="relative group fade-up visible">
                         <!-- Timeline circle dot indicator -->
                         <div class="absolute -left-[39px] top-1.5 w-[14px] h-[14px] rounded-full bg-white border-[3px] border-brand-primary shadow-sm transition-transform duration-200 group-hover:scale-125 z-10"></div>
@@ -203,7 +185,7 @@
                         <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
                             <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
                                 <span class="text-sm font-bold text-brand-primary flex items-center gap-2">
-                                    <i class="far fa-calendar-check"></i> {{ if .season }}{{ .season }}{{ else }}{{ $formatted_date }}{{ end }}
+                                    <i class="far fa-calendar-check"></i> {{ $entry.date_label }}
                                 </span>
                                 <span class="px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider border {{ $badge_class }}">
                                     {{ $badge_label }}
@@ -215,6 +197,7 @@
                             </div>
                         </div>
                     </div>
+                    {{ end }}
                 {{ end }}
             </div>
         </div>
@@ -228,14 +211,14 @@
 </section>
 
 <!-- News & Announcements -->
-{{ if .Site.Params.news }}
+{{ if hugo.Data.news }}
 <section class="py-24 bg-white">
     <div class="container">
         <div class="max-w-3xl mx-auto text-center mb-16 fade-up visible">
             <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-4 pb-4 relative inline-block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-brand-primary after:rounded-full">Latest Updates and Announcements</h2>
         </div>
 
-        {{ $sorted_news := sort .Site.Params.news "date" "desc" }}
+        {{ $sorted_news := sort hugo.Data.news "date" "desc" }}
         {{ $news_to_show := first 3 $sorted_news }}
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -269,7 +252,7 @@
 {{ end }}
 
 <!-- Sponsors Section -->
-{{ if and .Site.Params.enable_sponsors .Site.Params.sponsors }}
+{{ if and .Site.Params.enable_sponsors hugo.Data.sponsors }}
 <section id="sponsors" class="py-24 bg-brand-bg-light border-t border-b border-slate-100 overflow-hidden">
     <div class="container">
         <div class="max-w-3xl mx-auto text-center mb-12 fade-up visible">
@@ -285,13 +268,13 @@
             
             <div class="animate-marquee gap-8 items-center flex">
                 {{/* Loop 1 */}}
-                {{ range .Site.Params.sponsors }}
+                {{ range hugo.Data.sponsors }}
                     <a href="{{ .url }}" class="flex items-center justify-center bg-white px-8 py-4 w-44 h-20 rounded-xl shadow-sm border border-slate-150/40 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary/20 transition-all duration-200 flex-shrink-0" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
                         <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
                     </a>
                 {{ end }}
                 {{/* Loop 2 (seamless connector) */}}
-                {{ range .Site.Params.sponsors }}
+                {{ range hugo.Data.sponsors }}
                     <a href="{{ .url }}" class="flex items-center justify-center bg-white px-8 py-4 w-44 h-20 rounded-xl shadow-sm border border-slate-150/40 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary/20 transition-all duration-200 flex-shrink-0" target="_blank" rel="noopener noreferrer" title="{{ .name }}" aria-hidden="true">
                         <img src="{{ .logo | relURL }}" alt="" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
                     </a>

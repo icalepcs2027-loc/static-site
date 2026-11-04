@@ -1,0 +1,44 @@
+{{- $dated := slice -}}
+{{- $pending := slice -}}
+{{- $upcoming := slice -}}
+{{- $now := .now -}}
+{{- range .items -}}
+    {{- if not .hidden -}}
+        {{- $label := "To be announced" -}}
+        {{- $expired := false -}}
+        {{- $hasDate := false -}}
+        {{- $sortDate := $now -}}
+        {{- with .date -}}
+            {{- $hasDate = true -}}
+            {{- $sortDate = time.AsTime . -}}
+            {{- $expired = lt $sortDate $now -}}
+            {{- $label = $sortDate.Format (site.Params.date_fmt | default "January 2, 2006") -}}
+        {{- end -}}
+        {{- with .season -}}{{- $label = . -}}{{- end -}}
+        {{- $entry := dict "event" . "date_label" $label "expired" $expired "pending" (not $hasDate) "sort_date" $sortDate -}}
+        {{- if $hasDate -}}
+            {{- $dated = $dated | append $entry -}}
+        {{- else -}}
+            {{- $pending = $pending | append $entry -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- $dated = sort $dated "sort_date" "asc" -}}
+{{- $ordered := slice -}}
+{{- $unordered := slice -}}
+{{- range ($dated | append $pending) -}}
+    {{- if and (isset .event "order") (ne .event.order nil) -}}
+        {{- $ordered = $ordered | append (dict "entry" . "order" (int .event.order)) -}}
+    {{- else -}}
+        {{- $unordered = $unordered | append . -}}
+    {{- end -}}
+{{- end -}}
+{{- $all := slice -}}
+{{- range sort $ordered "order" "asc" -}}
+    {{- $all = $all | append .entry -}}
+{{- end -}}
+{{- $all = $all | append $unordered -}}
+{{- range $all -}}
+    {{- if not .expired -}}{{- $upcoming = $upcoming | append . -}}{{- end -}}
+{{- end -}}
+{{- return (dict "all" $all "upcoming" $upcoming) -}}
