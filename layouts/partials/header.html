@@ -57,8 +57,8 @@
         :class="scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md py-3.5 shadow-md border-b border-slate-200/30 dark:border-slate-800/30 text-black dark:text-white' : 'bg-transparent py-5 text-black border-b border-white/0'"
         class="w-full transition-all duration-300"
     >
-        <div class="container flex items-center justify-between">
-            <a href="{{ `/` | relURL }}" class="flex items-center">
+        <div class="container flex items-center justify-between gap-6">
+            <a href="{{ `/` | relURL }}" class="flex items-center shrink-0">
                 {{ if .Site.Params.logo_image }}
                     <img
                         src="{{ .Site.Params.logo_image | strings.TrimPrefix "/" | relURL }}"
@@ -74,15 +74,16 @@
                 </span>
             </a>
             
+            <!-- Header breakpoint: nav = 1000px; matchMedia uses the same width. -->
             <!-- Hamburger Button -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-inherit focus:outline-none z-50 text-xl" aria-label="Toggle navigation">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="nav:hidden shrink-0 text-inherit focus:outline-none z-50 text-xl" aria-label="Toggle navigation">
                 <i class="fas" :class="mobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
             </button>
             
             <!-- Nav Links (Desktop & Mobile Drawer) -->
             <nav
-                :class="{ 'max-md:translate-x-0': mobileMenuOpen, 'max-md:translate-x-full': !mobileMenuOpen }"
-                class="max-md:fixed max-md:top-0 max-md:right-0 max-md:h-screen max-md:w-72 max-md:bg-brand-dark/95 max-md:p-8 max-md:flex-col max-md:justify-start max-md:items-start max-md:pt-24 max-md:z-40 max-md:shadow-2xl transition-transform duration-300 ease-in-out md:flex md:items-center md:gap-8 max-md:overflow-y-auto max-md:translate-x-full max-md:text-white"
+                :class="{ 'max-nav:translate-x-0': mobileMenuOpen, 'max-nav:translate-x-full': !mobileMenuOpen }"
+                class="max-nav:fixed max-nav:top-0 max-nav:right-0 max-nav:h-screen max-nav:w-72 max-nav:bg-brand-dark/95 max-nav:p-8 max-nav:flex-col max-nav:justify-start max-nav:items-start max-nav:pt-24 max-nav:z-40 max-nav:shadow-2xl transition-transform duration-300 ease-in-out nav:flex nav:items-center nav:gap-6 nav:shrink-0 max-nav:overflow-y-auto max-nav:translate-x-full max-nav:text-white"
                 id="nav-links"
             >
                 {{ $current := . }}
@@ -100,14 +101,14 @@
                         <!-- 2nd Level Dropdown Group -->
                         <div
                             x-data="{ open: false }"
-                            @mouseenter="if (window.innerWidth > 768) open = true"
-                            @mouseleave="if (window.innerWidth > 768) open = false"
+                            @mouseenter="if (window.matchMedia('(min-width: 1000px)').matches) open = true"
+                            @mouseleave="if (window.matchMedia('(min-width: 1000px)').matches) open = false"
                             @click.away="open = false"
-                            class="relative w-full md:w-auto group max-md:border-b max-md:border-white/10 max-md:py-2"
+                            class="relative w-full nav:w-auto group max-nav:border-b max-nav:border-white/10 max-nav:py-2"
                         >
                             <button
-                                @click="if (window.innerWidth <= 768) open = !open"
-                                class="flex items-center justify-between w-full md:gap-1 font-medium transition-colors cursor-pointer py-1 {{ if $isParentActive }}border-b-2 md:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
+                                @click="if (!window.matchMedia('(min-width: 1000px)').matches) open = !open"
+                                class="flex items-center justify-between w-full nav:gap-1 font-medium transition-colors cursor-pointer py-1 {{ if $isParentActive }}border-b-2 nav:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
                                 :class="scrolled ? ({{ if $isParentActive }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if $isParentActive }}'text-inherit! border-current!'{{ else }}'text-inherit'{{ end }})"
                             >
                                 <span>{{ .Name }}</span>
@@ -123,7 +124,7 @@
                                 x-transition:leave="transition ease-in duration-100"
                                 x-transition:leave-start="opacity-100 scale-100"
                                 x-transition:leave-end="opacity-0 scale-95"
-                                class="md:absolute md:left-0 md:mt-2 w-full md:w-56 rounded-2xl md:shadow-xl md:bg-white dark:md:bg-slate-900 md:text-slate-800 dark:md:text-slate-200 divide-y divide-slate-100 dark:divide-slate-800/80 focus:outline-none z-50 pl-4 md:pl-0 max-md:bg-transparent max-md:text-white py-1.5"
+                                class="nav:absolute nav:left-0 nav:mt-2 w-full nav:w-56 rounded-2xl nav:shadow-xl nav:bg-white dark:nav:bg-slate-900 nav:text-slate-800 dark:nav:text-slate-200 divide-y divide-slate-100 dark:divide-slate-800/80 focus:outline-none z-50 pl-4 nav:pl-0 max-nav:bg-transparent max-nav:text-white py-1.5"
                                 style="display: none;"
                             >
                                 {{ range .Children }}
@@ -135,29 +136,29 @@
                                         {{ end }}
                                         <div
                                             x-data="{ openSub: false }"
-                                            @mouseenter="if (window.innerWidth > 768) openSub = true"
-                                            @mouseleave="if (window.innerWidth > 768) openSub = false"
+                                            @mouseenter="if (window.matchMedia('(min-width: 1000px)').matches) openSub = true"
+                                            @mouseleave="if (window.matchMedia('(min-width: 1000px)').matches) openSub = false"
                                             @click.away="openSub = false"
                                             class="relative w-full"
                                         >
                                             <button
-                                                @click="if (window.innerWidth <= 768) openSub = !openSub"
-                                                class="flex items-center justify-between w-full px-4 py-3 text-sm text-left hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors cursor-pointer {{ if $isSubParentActive }}font-semibold text-brand-primary max-md:text-white{{ end }}"
+                                                @click="if (!window.matchMedia('(min-width: 1000px)').matches) openSub = !openSub"
+                                                class="flex items-center justify-between w-full px-4 py-3 text-sm text-left hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors cursor-pointer {{ if $isSubParentActive }}font-semibold text-brand-primary max-nav:text-white{{ end }}"
                                             >
                                                 <span>{{ .Name }}</span>
-                                                <i class="fas fa-chevron-right text-[0.75em] hidden md:inline"></i>
-                                                <i class="fas fa-chevron-down text-[0.75em] md:hidden transition-transform duration-200" :class="openSub ? 'rotate-180' : ''"></i>
+                                                <i class="fas fa-chevron-right text-[0.75em] hidden nav:inline"></i>
+                                                <i class="fas fa-chevron-down text-[0.75em] nav:hidden transition-transform duration-200" :class="openSub ? 'rotate-180' : ''"></i>
                                             </button>
                                             
                                             <!-- 3rd Level Menu Panel -->
                                             <div
                                                 x-show="openSub"
                                                 x-transition
-                                                class="md:absolute md:left-full md:top-0 w-full md:w-56 rounded-2xl md:shadow-xl md:bg-white dark:md:bg-slate-900 md:text-slate-800 dark:md:text-slate-200 focus:outline-none pl-4 md:pl-0 max-md:bg-transparent max-md:text-white py-1"
+                                                class="nav:absolute nav:left-full nav:top-0 w-full nav:w-56 rounded-2xl nav:shadow-xl nav:bg-white dark:nav:bg-slate-900 nav:text-slate-800 dark:nav:text-slate-200 focus:outline-none pl-4 nav:pl-0 max-nav:bg-transparent max-nav:text-white py-1"
                                                 style="display: none;"
                                             >
                                                 {{ range .Children }}
-                                                    <a href="{{ .URL | relURL }}" class="block px-8 md:px-4 py-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors {{ if eq $relPermalink .URL }}font-semibold text-brand-primary!{{ end }}">{{ .Name }}</a>
+                                                    <a href="{{ .URL | relURL }}" class="block px-8 nav:px-4 py-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors {{ if eq $relPermalink .URL }}font-semibold text-brand-primary!{{ end }}">{{ .Name }}</a>
                                                 {{ end }}
                                             </div>
                                         </div>
@@ -170,14 +171,14 @@
                     {{ else }}
                         <a
                             href="{{ .URL | relURL }}"
-                            class="font-medium transition-colors py-1.5 block w-full md:w-auto max-md:border-b max-md:border-white/10 {{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}border-b-2 md:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
+                            class="font-medium transition-colors py-1.5 block w-full nav:w-auto max-nav:border-b max-nav:border-white/10 {{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}border-b-2 nav:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
                             :class="scrolled ? ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-inherit! border-current!'{{ else }}'text-inherit'{{ end }})"
                         >
                             {{ .Name }}
                         </a>
                     {{ end }}
                 {{ end }}
-                <a href="{{ .Site.Params.registration_link | relURL }}" class="mt-4 md:mt-0 w-full md:w-auto text-center inline-block px-5 py-2 rounded-full font-bold text-sm bg-brand-primary text-white! hover:bg-brand-primary-hover shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">Register</a>
+                <a href="{{ .Site.Params.registration_link | relURL }}" class="mt-4 nav:mt-0 w-full nav:w-auto text-center inline-block px-5 py-2 rounded-full font-bold text-sm bg-brand-primary text-white! hover:bg-brand-primary-hover shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">Register</a>
             </nav>
         </div>
     </div>

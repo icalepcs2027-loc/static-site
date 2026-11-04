@@ -4,6 +4,7 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --breakpoint-nav: 1000px;
   /* Dynamic custom properties mapped from hugo.toml */
   --font-sans: var(--font-sans-markdown, 'Inter', -apple-system, sans-serif);
   --font-heading: var(--font-heading, 'Montserrat', sans-serif);
