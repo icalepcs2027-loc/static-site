@@ -6,7 +6,48 @@ This document details how to configure the site metadata, manage key database fe
 
 ## 1. Central Configuration (hugo.toml)
 
-Manage all core database items and layout styles in `hugo.toml` located in the project root.
+Manage site metadata and appearance in `hugo.toml` located in the project root. News, sponsors, schedules, committees, and navigation are stored under `data/`.
+
+### Navigation Menus
+
+Edit `data/menus.yaml` to change the header, footer, and page sidebar navigation. The templates read this custom data file automatically; it does not populate Hugo's native `Site.Menus`.
+
+* `main`: Header navigation and page sidebar groups.
+* `footer_quick`: Footer quick links.
+* `footer_info`: Footer information links.
+* Entries appear in file order; move list items to reorder them. No `weight` is required.
+* `children`: Nested menu items; no `parent` or `identifier` is required. The current templates display up to three menu levels.
+* `name`: Display name. `url`: Link target and, for local groups, the base path for children. Groups without a URL inherit their parent's base path.
+* Child local URLs are joined to the parent path regardless of leading/trailing slashes. Repeated slashes are collapsed, and directory links receive a trailing slash. A child already containing the full parent path is not prefixed again. Query strings and fragments are preserved.
+* Absolute URLs such as `https://...`, `mailto:...`, and `tel:...` ignore the parent path. Use an explicit scheme for external URLs; leading slashes always mean a local path in this format. Local links also include the build's `baseURL` subdirectory.
+* `new_tab`: Set `true` to open the individual link in a new tab. `false` or omission opens it in the same tab. This works for internal and external links in the header, footer, and sidebar. The setting does not propagate to children. New-tab links include `rel="noopener noreferrer"`.
+
+```yaml
+main:
+  - name: "About"
+    url: "/about/"
+    children:
+      - name: "Welcome Address"
+        url: "/about-welcome/"
+      - name: "Committees"
+        url: "/about-committees/"
+      - name: "External Information"
+        url: "https://example.org/"
+        new_tab: true
+  - name: "Contact"
+    url: "/contact/"
+  - name: "External Registration"
+    url: "https://registration.example.org/"
+    new_tab: true
+
+footer_quick:
+  - name: "Important Dates"
+    url: "/key-dates/"
+
+footer_info:
+  - name: "FAQ"
+    url: "/about/about-faq/"
+```
 
 ### Basic Conference Information
 

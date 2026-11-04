@@ -24,7 +24,7 @@
 {{ $siblingNodes := slice }}
 {{ $parentMenuTitle := "" }}
 
-{{ range .Site.Menus.main }}
+{{ range (partial "navigation/items.html" (dict "items" hugo.Data.menus.main)) }}
     {{ if .HasChildren }}
         {{ $parentEntry := . }}
         {{ if eq $relPermalink .URL }}
@@ -84,7 +84,7 @@
                                 
                                 <li x-data="{ active: {{ or $isChildActive $hasActiveGrandchild }} }" class="flex flex-col">
                                     <div class="flex items-center justify-between rounded-lg {{ if or $isChildActive $hasActiveGrandchild }}bg-brand-primary/10 text-brand-primary{{ else }}hover:bg-slate-50 dark:hover:bg-slate-800/40 text-slate-600 dark:text-slate-350 hover:text-slate-900 dark:hover:text-slate-100{{ end }} transition-colors">
-                                        <a href="{{ if .URL }}{{ .URL | relURL }}{{ else }}javascript:void(0);{{ end }}" class="flex-grow px-4 py-2.5">
+                                        <a href="{{ if .URL }}{{ .URL }}{{ else }}javascript:void(0);{{ end }}"{{ if and .NewTab .URL }} target="_blank" rel="noopener noreferrer"{{ end }} class="flex-grow px-4 py-2.5">
                                             {{ .Name }}
                                         </a>
                                         {{ if .HasChildren }}
@@ -105,7 +105,7 @@
                                     >
                                         {{ range .Children }}
                                         <li>
-                                            <a href="{{ .URL | relURL }}" class="block px-3 py-2 rounded-md text-xs {{ if eq $relPermalink .URL }}font-semibold text-brand-primary bg-slate-50 dark:bg-slate-800{{ else }}text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-50/50 dark:hover:bg-slate-800/20{{ end }} transition-colors">
+                                            <a href="{{ .URL }}"{{ if and .NewTab .URL }} target="_blank" rel="noopener noreferrer"{{ end }} class="block px-3 py-2 rounded-md text-xs {{ if eq $relPermalink .URL }}font-semibold text-brand-primary bg-slate-50 dark:bg-slate-800{{ else }}text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-50/50 dark:hover:bg-slate-800/20{{ end }} transition-colors">
                                                 <i class="fas fa-chevron-right text-[0.6em] mr-1 opacity-70"></i> {{ .Name }}
                                             </a>
                                         </li>

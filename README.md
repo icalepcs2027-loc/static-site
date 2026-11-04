@@ -10,8 +10,9 @@ Branding, colors, and display settings are configured in `hugo.toml`. News (`dat
 
 ```text
 web/
-├── hugo.toml                 # Site metadata, branding, appearance, and navigation
-├── data/                     # YAML data: news, sponsors, schedules, and committees
+├── hugo.toml                 # Site metadata, branding, and appearance
+├── data/                     # YAML data: menus, news, sponsors, schedules, and committees
+│   ├── menus.yaml            # Nested header, sidebar, and footer navigation
 ├── tailwindcss               # Tailwind CSS CLI binary for template compilation
 ├── assets/
 │   └── css/

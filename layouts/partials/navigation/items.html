@@ -1,0 +1,40 @@
+{{- $items := slice -}}
+{{- $parent := .parent | default "" -}}
+{{- range .items -}}
+    {{- $raw := strings.TrimSpace (.url | default "") -}}
+    {{- $url := "" -}}
+    {{- $childParent := $parent -}}
+    {{- if $raw -}}
+        {{- if findRE "^[A-Za-z][A-Za-z0-9+.-]*:" $raw -}}
+            {{- /* Absolute URLs, mailto and tel are independent of parent paths. */ -}}
+            {{- $url = $raw -}}
+            {{- if strings.HasPrefix (lower $raw) "tel:" -}}
+                {{- $url = $raw | safeURL -}}
+            {{- end -}}
+        {{- else -}}
+            {{- /* Normalize path separators without touching query strings or fragments. */ -}}
+            {{- $suffix := replaceRE "^[^?#]*" "" $raw -}}
+            {{- $local := replaceRE "[?#].*$" "" $raw -}}
+            {{- $local = replaceRE "/+" "/" $local -}}
+            {{- $local = replaceRE "^/+|/+$" "" $local -}}
+            {{- $resolved := $parent -}}
+            {{- if $local -}}
+                {{- if or (not $parent) (eq $local $parent) (strings.HasPrefix $local (printf "%s/" $parent)) -}}
+                    {{- $resolved = $local -}}
+                {{- else -}}
+                    {{- $resolved = printf "%s/%s" $parent $local -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $resolved = path.Clean (printf "/%s" $resolved) -}}
+            {{- $childParent = strings.TrimPrefix "/" $resolved -}}
+            {{- $sitePath := $childParent -}}
+            {{- if and $sitePath (not (path.Ext $sitePath)) -}}
+                {{- $sitePath = printf "%s/" $sitePath -}}
+            {{- end -}}
+            {{- $url = printf "%s%s" (relURL $sitePath) $suffix -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $children := partial "navigation/items.html" (dict "items" (.children | default (slice)) "parent" $childParent) -}}
+    {{- $items = $items | append (dict "Name" .name "URL" $url "NewTab" (.new_tab | default false) "Children" $children "HasChildren" (gt (len $children) 0)) -}}
+{{- end -}}
+{{- return $items -}}

@@ -88,7 +88,7 @@
             >
                 {{ $current := . }}
                 {{ $relPermalink := .RelPermalink }}
-                {{ range .Site.Menus.main }}
+                {{ range (partial "navigation/items.html" (dict "items" hugo.Data.menus.main)) }}
                     {{ $isParentActive := eq $relPermalink .URL }}
                     {{ if .HasChildren }}
                         {{ range .Children }}
@@ -158,19 +158,19 @@
                                                 style="display: none;"
                                             >
                                                 {{ range .Children }}
-                                                    <a href="{{ .URL | relURL }}" class="block px-8 nav:px-4 py-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors {{ if eq $relPermalink .URL }}font-semibold text-brand-primary!{{ end }}">{{ .Name }}</a>
+                                                    <a href="{{ .URL }}"{{ if and .NewTab .URL }} target="_blank" rel="noopener noreferrer"{{ end }} class="block px-8 nav:px-4 py-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors {{ if eq $relPermalink .URL }}font-semibold text-brand-primary!{{ end }}">{{ .Name }}</a>
                                                 {{ end }}
                                             </div>
                                         </div>
                                     {{ else }}
-                                        <a href="{{ .URL | relURL }}" class="block px-4 py-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors {{ if eq $relPermalink .URL }}font-semibold text-brand-primary!{{ end }}">{{ .Name }}</a>
+                                        <a href="{{ .URL }}"{{ if and .NewTab .URL }} target="_blank" rel="noopener noreferrer"{{ end }} class="block px-4 py-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-primary dark:hover:text-brand-primary transition-colors {{ if eq $relPermalink .URL }}font-semibold text-brand-primary!{{ end }}">{{ .Name }}</a>
                                     {{ end }}
                                 {{ end }}
                             </div>
                         </div>
                     {{ else }}
                         <a
-                            href="{{ .URL | relURL }}"
+                            href="{{ .URL }}"{{ if and .NewTab .URL }} target="_blank" rel="noopener noreferrer"{{ end }}
                             class="font-medium transition-colors py-1.5 block w-full nav:w-auto max-nav:border-b max-nav:border-white/10 {{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}border-b-2 nav:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
                             :class="scrolled ? ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-inherit! border-current!'{{ else }}'text-inherit'{{ end }})"
                         >
