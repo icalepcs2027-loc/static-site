@@ -1,15 +1,15 @@
 {{ $committees := slice
-    hugo.Data.committees.oc
-    hugo.Data.committees.spc
-    hugo.Data.committees.sab
+    hugo.Data.committees.conference_chair
+    hugo.Data.committees.iec
+    hugo.Data.committees.isac
+    hugo.Data.committees.ssc
     hugo.Data.committees.loc
 }}
 
 {{ range $committees }}
     {{ if . }}
-    {{ $id := .id }}
-    {{ $chairs := .chairs }}
-    {{ $members := .members }}
+    {{ $chairs := .chairs | default (slice) }}
+    {{ $members := .members | default (slice) }}
     {{ $hideMembers := .hide_members }}
     
     <!-- Collapsible main committee panel -->
@@ -49,124 +49,8 @@
             </div>
             {{ end }}
             
-            <!-- 2. Roster Section for Regular Members -->
-            {{ if $hideMembers }}
-                {{ if eq $id "sab" }}
-                <div class="flex flex-col items-center justify-center py-8 px-4 border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl bg-slate-50/50 dark:bg-slate-900/50">
-                    <div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-500 mb-2.5">
-                        <i class="fas fa-users-slash text-sm"></i>
-                    </div>
-                    <div class="text-sm font-semibold text-slate-500 dark:text-slate-400">To Be Announced</div>
-                    <div class="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5 uppercase tracking-wider font-extrabold">TBD</div>
-                </div>
-                {{ end }}
-            {{ else }}
-                {{ if eq $id "sab" }}
-                    <!-- SAB Special Case: Split regular members into three collapsible regions -->
-                    {{ $sabAmerica := where $members "region" "America" }}
-                    {{ $sabAsia := where $members "region" "Asia" }}
-                    {{ $sabEurope := where $members "region" "Europe" }}
-                    
-                    <div class="space-y-6">
-                        <!-- America region collapsible panel -->
-                        {{ if gt (len $sabAmerica) 0 }}
-                        <details class="group/sub border border-slate-100 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm" open>
-                            <summary class="flex items-center justify-between p-4 bg-slate-50/50 dark:bg-slate-850/30 cursor-pointer select-none font-heading font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base list-none [&::-webkit-details-marker]:hidden">
-                                <h3 class="m-0 text-sm sm:text-base font-bold text-brand-secondary dark:text-slate-100 flex items-center gap-2">
-                                    <i class="fas fa-globe-americas text-brand-primary/70"></i> America Region ({{ len $sabAmerica }} members)
-                                </h3>
-                                <span class="w-7 h-7 rounded-full hover:bg-slate-150 dark:hover:bg-slate-800 flex items-center justify-center text-slate-400 group-open/sub:rotate-180 group-open/sub:text-brand-primary transition-transform duration-200">
-                                    <i class="fas fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="p-5 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {{ range $sabAmerica }}
-                                        {{ $fullName := printf "%s %s" .name .surname }}
-                                        <div class="flex items-center gap-3 p-3 bg-slate-50/30 dark:bg-slate-850/10 hover:bg-slate-50/70 dark:hover:bg-slate-800 border border-slate-100 dark:border-slate-800 rounded-lg transition-colors">
-                                            {{ if .avatar }}
-                                            <img src="{{ .avatar | relURL }}" alt="{{ $fullName }}" class="w-6 h-6 rounded-full object-cover flex-shrink-0">
-                                            {{ else }}
-                                            <div class="w-1.5 h-1.5 rounded-full bg-brand-primary/50 flex-shrink-0"></div>
-                                            {{ end }}
-                                            <div class="flex flex-col min-w-0">
-                                                <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 truncate">{{ $fullName }}</span>
-                                                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium truncate mt-0.5">{{ .institution }}{{ if .location }} ({{ .location }}){{ end }}</span>
-                                            </div>
-                                        </div>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </details>
-                        {{ end }}
-
-                        <!-- Asia region collapsible panel -->
-                        {{ if gt (len $sabAsia) 0 }}
-                        <details class="group/sub border border-slate-100 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm" open>
-                            <summary class="flex items-center justify-between p-4 bg-slate-50/50 dark:bg-slate-850/30 cursor-pointer select-none font-heading font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base list-none [&::-webkit-details-marker]:hidden">
-                                <h3 class="m-0 text-sm sm:text-base font-bold text-brand-secondary dark:text-slate-100 flex items-center gap-2">
-                                    <i class="fas fa-globe-asia text-brand-primary/70"></i> Asia Region ({{ len $sabAsia }} members)
-                                </h3>
-                                <span class="w-7 h-7 rounded-full hover:bg-slate-150 dark:hover:bg-slate-800 flex items-center justify-center text-slate-400 group-open/sub:rotate-180 group-open/sub:text-brand-primary transition-transform duration-200">
-                                    <i class="fas fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="p-5 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {{ range $sabAsia }}
-                                        {{ $fullName := printf "%s %s" .name .surname }}
-                                        <div class="flex items-center gap-3 p-3 bg-slate-50/30 dark:bg-slate-850/10 hover:bg-slate-50/70 dark:hover:bg-slate-800 border border-slate-100 dark:border-slate-800 rounded-lg transition-colors">
-                                            {{ if .avatar }}
-                                            <img src="{{ .avatar | relURL }}" alt="{{ $fullName }}" class="w-6 h-6 rounded-full object-cover flex-shrink-0">
-                                            {{ else }}
-                                            <div class="w-1.5 h-1.5 rounded-full bg-brand-primary/50 flex-shrink-0"></div>
-                                            {{ end }}
-                                            <div class="flex flex-col min-w-0">
-                                                <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 truncate">{{ $fullName }}</span>
-                                                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium truncate mt-0.5">{{ .institution }}{{ if .location }} ({{ .location }}){{ end }}</span>
-                                            </div>
-                                        </div>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </details>
-                        {{ end }}
-
-                        <!-- Europe region collapsible panel -->
-                        {{ if gt (len $sabEurope) 0 }}
-                        <details class="group/sub border border-slate-100 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm" open>
-                            <summary class="flex items-center justify-between p-4 bg-slate-50/50 dark:bg-slate-850/30 cursor-pointer select-none font-heading font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base list-none [&::-webkit-details-marker]:hidden">
-                                <h3 class="m-0 text-sm sm:text-base font-bold text-brand-secondary dark:text-slate-100 flex items-center gap-2">
-                                    <i class="fas fa-globe-europe text-brand-primary/70"></i> Europe Region ({{ len $sabEurope }} members)
-                                </h3>
-                                <span class="w-7 h-7 rounded-full hover:bg-slate-150 dark:hover:bg-slate-800 flex items-center justify-center text-slate-400 group-open/sub:rotate-180 group-open/sub:text-brand-primary transition-transform duration-200">
-                                    <i class="fas fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="p-5 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {{ range $sabEurope }}
-                                        {{ $fullName := printf "%s %s" .name .surname }}
-                                        <div class="flex items-center gap-3 p-3 bg-slate-50/30 dark:bg-slate-850/10 hover:bg-slate-50/70 dark:hover:bg-slate-800 border border-slate-100 dark:border-slate-800 rounded-lg transition-colors">
-                                            {{ if .avatar }}
-                                            <img src="{{ .avatar | relURL }}" alt="{{ $fullName }}" class="w-6 h-6 rounded-full object-cover flex-shrink-0">
-                                            {{ else }}
-                                            <div class="w-1.5 h-1.5 rounded-full bg-brand-primary/50 flex-shrink-0"></div>
-                                            {{ end }}
-                                            <div class="flex flex-col min-w-0">
-                                                <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 truncate">{{ $fullName }}</span>
-                                                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium truncate mt-0.5">{{ .institution }}{{ if .location }} ({{ .location }}){{ end }}</span>
-                                            </div>
-                                        </div>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </details>
-                        {{ end }}
-                    </div>
-                {{ else }}
-                    <!-- Non-SAB Committees: Standard compact roster -->
-                    {{ if gt (len $members) 0 }}
+            <!-- Members use the same layout for every committee. -->
+            {{ if and (not $hideMembers) (gt (len $members) 0) }}
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {{ range $members }}
                             {{ $fullName := printf "%s %s" .name .surname }}
@@ -186,8 +70,8 @@
                             </div>
                         {{ end }}
                     </div>
-                    {{ end }}
-                {{ end }}
+            {{ else if not (gt (len $chairs) 0) }}
+                <div class="text-sm font-semibold text-slate-500 dark:text-slate-400">To Be Announced</div>
             {{ end }}
         </div>
     </details>

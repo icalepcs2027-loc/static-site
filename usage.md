@@ -122,19 +122,29 @@ Edit `data/sponsors.yaml`. The `sponsors-grid` shortcode renders sponsor graphic
 
 ### Organizing Committees
 
-Configures rosters for different committee groups:
+Edit the YAML files under `data/committees/`. The `committees-list` shortcode displays them in this order:
 
-* Set `chair = true` to highlight the member at the top of the roster.
-* For `committee_sab` members, group them by setting `region` to `"America"`, `"Asia"`, or `"Europe"`. The template handles tab categorization automatically.
+1. `conference_chair.yaml`: Conference Chair
+2. `iec.yaml`: ICALEPCS Executive Committee (IEC)
+3. `isac.yaml`: International Scientific Advisory Committee (ISAC)
+4. `ssc.yaml`: Site Selection Committee (SSC)
+5. `loc.yaml`: Local Organization Committee (LOC)
 
-```toml
-[[params.committee_ioc]]
-  name = "Tadashi"
-  surname = "Koseki"
-  institution = "KEK"
-  location = "Japan"
-  desc = "IOC Chair"
-  chair = true
+Add highlighted chairs under `chairs` and other members under `members`. Empty committees display "To Be Announced". Set `hide_members: true` to hide the regular member list while retaining any chairs. `location`, `desc`, and `avatar` are optional.
+
+Both `chairs` and `members` may be omitted, left blank, or set to `null` or `[]`; all are treated as empty lists. If chairs are present and members are empty, only the chairs are displayed.
+
+```yaml
+id: "iec"
+title: "ICALEPCS Executive Committee (IEC)"
+hide_members: false
+chairs: []
+members:
+  - name: "Given name"
+    surname: "Family name"
+    institution: "Institution"
+    location: "Country"
+    desc: "Role"
 ```
 
 ---

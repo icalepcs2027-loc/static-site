@@ -1,0 +1,17 @@
+id: "conference_chair"
+title: "Conference Chair"
+hide_members: false
+
+# Fill chairs and members using the same fields as loc.yaml.
+chairs: 
+  - name: "Masanori"
+    surname: "Satoh"
+    institution: "KEK/J-PARC"
+    avatar: "/img/masanoris.png"
+
+
+  - name: "Shuei"
+    surname: "Yamada"
+    institution: "KEK/J-PARC"
+    avatar: "/img/shueiy.png"
+members:
