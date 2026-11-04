@@ -1,5 +1,5 @@
 id: "loc"
-title: "Local Organization Committee (LOC)"
+title: "Local Organizing Committee (LOC)"
 hide_members: false
 
 chairs:
@@ -14,12 +14,12 @@ members:
   - name: "Masanori"
     surname: "Satoh"
     institution: "KEK/J-PARC"
-    desc: "Co-Chair/ Conference Chair"
+    desc: "Co-Chair / Conference Chair"
 
   - name: "Shuei"
     surname: "Yamada"
     institution: "KEK/J-PARC"
-    desc: "Co-Chair/ Conference Chair"
+    desc: "Co-Chair / Conference Chair"
 
   - name: "Fumiaki"
     surname: "Ito"

@@ -1,5 +1,5 @@
 id: "conference_chair"
-title: "Conference Chair"
+title: "Conference Chairs"
 hide_members: false
 
 # Fill chairs and members using the same fields as loc.yaml.

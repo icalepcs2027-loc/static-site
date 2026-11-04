@@ -124,11 +124,11 @@ Edit `data/sponsors.yaml`. The `sponsors-grid` shortcode renders sponsor graphic
 
 Edit the YAML files under `data/committees/`. The `committees-list` shortcode displays them in this order:
 
-1. `conference_chair.yaml`: Conference Chair
+1. `conference_chair.yaml`: Conference Chairs
 2. `iec.yaml`: ICALEPCS Executive Committee (IEC)
 3. `isac.yaml`: International Scientific Advisory Committee (ISAC)
 4. `ssc.yaml`: Site Selection Committee (SSC)
-5. `loc.yaml`: Local Organization Committee (LOC)
+5. `loc.yaml`: Local Organizing Committee (LOC)
 
 Add highlighted chairs under `chairs` and other members under `members`. Empty committees display "To Be Announced". Set `hide_members: true` to hide the regular member list while retaining any chairs. `location`, `desc`, and `avatar` are optional.
 
