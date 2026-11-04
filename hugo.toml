@@ -1,25 +1,25 @@
-baseURL = "https://test.ipac28.org/"
+baseURL = "https://test.icalepcs2027.org"
 locale = "en-us"
-title = "IPAC'28 - International Particle Accelerator Conference"
+title = "ICALEPCS2027 | The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
 
 [markup.goldmark.renderer]
 unsafe = true
 
 [params]
-logo_prefix = "IPAC"
-logo_suffix = "'28"
-logo_image = "/img/ipac28_1200x608.png"
-favicon = "/img/ipac28_600x304.png"
-conf_short_name = "IPAC'28"
-conf_full_name = "19th International Particle Accelerator Conference"
-conf_dates = "June 4-9, 2028"
-conf_start_date = "2028-06-04T08:00:00+09:00"
-conf_location = "Tokyo International Forum, Tokyo, Japan"
-email = "contact@ipac28.org"
+logo_prefix = "ICALEPCS"
+logo_suffix = "2027"
+logo_image = "/img/ICALEPCS2027_logo.png"
+favicon = "/img/ICALEPCS2027_logo.png"
+conf_short_name = "ICALEPCS 2027"
+conf_full_name = "The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
+conf_dates = "October 4-8, 2027"
+conf_start_date = "2027-10-04T08:00:00+09:00"
+conf_location = "Mito Civic Senter, Ibaraki, Japan"
+email = "contact@icalepcs2027.org"
 registration_link = "/register/register-conf/"
 
 # Appearance & Toggles
-hero_badge = "19th International Particle Accelerator Conference"
+hero_badge = "The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
 hero_image = "/img/ipac28_poster.png"
 about_image = "/img/kanko.png"
 enable_countdown = true
@@ -30,7 +30,7 @@ enable_stats = false
 enable_announcement = true
 # announcement_text = "Abstract submission will open on Oct 1, 2027!"
 # announcement_link = "/authors/authors-abstract/"
-announcement_text = "Welcome to the IPAC'28 Website!"
+announcement_text = "Welcome to the ICALEPCS 2027 Website!"
 announcement_link = "/about/about-welcome/"
 
 # Global date formatting style for all pages (standard Go layout)
@@ -213,9 +213,13 @@ font_size = "0.95rem"
 line_height = "1.65"
 font_family = "Inter"
 heading_font_family = "Montserrat"
-body_color = "#475569"
-heading_color = "#0f2547"
-link_color = "#f43f5e"
+body_color = "#3d5964"
+heading_color = "#155e75"
+link_color = "#007da6"
+accent_color = "#00bfff"
+primary_hover_color = "#006480"
+dark_color = "#083344"
+light_background_color = "#effbff"
 
 [params.social]
 # twitter = "https://twitter.com/IPAC28"

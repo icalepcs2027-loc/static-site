@@ -1,21 +1,21 @@
 {{ define "main" }}
 <!-- Hero Section -->
-<section id="home" class="relative pt-40 pb-28 md:pt-48 md:pb-36 bg-gradient-to-br from-brand-dark via-[#1a3a73] to-brand-secondary overflow-hidden">
+<section id="home" class="relative pt-40 pb-28 md:pt-48 md:pb-36 conference-hero overflow-hidden">
     <!-- Animated background accents -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(229,36,33,0.15),transparent_40%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(32,140,198,0.15),transparent_40%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.45),transparent_40%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(0,191,255,0.25),transparent_40%)]"></div>
     
     <div class="container relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Hero Content -->
             <div class="lg:col-span-7 flex flex-col items-start">
-                <div class="fade-up visible inline-block bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white mb-6 backdrop-blur-sm">
+                <div class="fade-up visible inline-block bg-white/40 border border-brand-primary/20 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-dark mb-6 backdrop-blur-sm">
                     {{ .Site.Params.hero_badge }}
                 </div>
-                <h1 class="fade-up visible delay-1 text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-md">
-                    {{ .Site.Params.conf_full_name }}
+                <h1 class="fade-up visible delay-1 text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-brand-dark leading-tight mb-6 tracking-tight drop-shadow-md">
+                    {{ .Site.Params.conf_short_name }}
                 </h1>
-                <p class="fade-up visible delay-2 text-lg sm:text-xl text-white/90 mb-8 flex flex-col gap-2 font-medium leading-relaxed">
+                <p class="fade-up visible delay-2 text-lg sm:text-xl text-brand-dark/90 mb-8 flex flex-col gap-2 font-medium leading-relaxed">
                     <span class="flex items-center gap-3">
                         <i class="fas fa-calendar-alt text-brand-primary text-base"></i> {{ .Site.Params.conf_dates }}
                     </span>
@@ -25,14 +25,14 @@
                 </p>
                 <div class="fade-up visible delay-3 flex flex-wrap gap-4">
                     <a href="{{ `authors/authors-abstract/` | relURL }}" class="px-8 py-3.5 rounded-full font-bold text-sm bg-brand-primary text-white hover:bg-brand-primary-hover shadow-lg hover:-translate-y-0.5 transition-all duration-200">Submit Abstract</a>
-                    <a href="{{ `program/program-scientific` | relURL }}" class="px-8 py-3.5 rounded-full font-bold text-sm bg-white/10 text-white border border-white/30 hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200">Learn More</a>
+                    <a href="{{ `program/program-scientific` | relURL }}" class="px-8 py-3.5 rounded-full font-bold text-sm bg-white/40 text-brand-dark border border-brand-primary/30 hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200">Learn More</a>
                 </div>
             </div>
             
             <!-- Right Hero Poster -->
             <div class="lg:col-span-5 flex justify-center lg:justify-end fade-up visible delay-2">
                 <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-[#208cc6] rounded-2xl blur-xl opacity-30 group-hover:opacity-45 transition duration-1000"></div>
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-2xl blur-xl opacity-30 group-hover:opacity-45 transition duration-1000"></div>
                     <img src="{{ .Site.Params.hero_image | relURL }}" alt="Conference Poster" class="relative rounded-2xl shadow-2xl border-4 border-white/10 w-full max-w-[380px] object-contain hover:scale-[1.02] transition-transform duration-300">
                 </div>
             </div>
@@ -107,11 +107,12 @@
             <!-- Left text block -->
             <div class="lg:col-span-7 fade-up visible">
                 <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-6 pb-4 relative after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-brand-primary after:rounded-full">
-                    Join us in Tokyo for {{ .Site.Params.conf_short_name }}
+                    Welcome to {{ .Site.Params.conf_short_name }} !
                 </h2>
                 <div class="text-slate-600 leading-relaxed space-y-4 mb-8 text-base">
-                    <p>The International Particle Accelerator Conference (IPAC) is the main international event for the worldwide particle accelerator field and industry. The {{ .Site.Params.conf_short_name }} edition brings together accelerator scientists, engineers, students, and vendors from across the globe.</p>
-                    <p>Hosted in the vibrant and bustling city of Tokyo, Japan, attendees will have the opportunity to experience a unique blend of rich cultural heritage and cutting-edge technology. Alongside an engaging scientific program, you can explore iconic sightseeing spots, enjoy exquisite cuisine, and establish valuable global connections.</p>
+                    <p>ICALEPCS (International Conference on Accelerator and Large Experimental Physics Control Systems) is the premier conference dedicated to the design, human interface, and operational aspects of control systems for particle accelerators, synchrotrons, telescopes, fusion reactors, and other large-scale experimental physics facilities.</p>
+                    <p>In 2027, the conference will head to Mito City's Civic Center in Ibaraki, Japan—a region deeply connected with cutting-edge scientific research institutions and rich cultural heritage. More details regarding the call for papers, registration timelines, and program will be announced soon.</p>
+                    <p>We look forward to welcoming participants from around the world to ICALEPCS 2027 in Mito!</p>
                 </div>
                 
                 <!-- Stats Row -->
@@ -240,7 +241,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {{ range $i, $item := $news_to_show }}
                 {{ $formatted_news_date := (time $item.date).Format (site.Params.date_fmt | default "January 2, 2006") }}
-                {{ $accent_colors := slice "from-blue-600 to-[#208cc6]" "from-emerald-500 to-green-600" "from-rose-500 to-brand-primary" }}
+                {{ $accent_colors := slice "from-brand-primary to-brand-accent" "from-teal-600 to-cyan-400" "from-sky-600 to-brand-accent" }}
                 {{ $accent := index $accent_colors (mod $i 3) }}
                 
                 <article class="bg-white rounded-2xl border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden group fade-up visible">

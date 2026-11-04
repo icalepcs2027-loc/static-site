@@ -30,7 +30,7 @@
         x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-full"
-        class="bg-[#1d1d1f]/90 dark:bg-black/90 backdrop-blur-md border-b border-white/5 text-slate-300 py-2 px-4 text-xs font-normal tracking-wide relative z-50 text-center font-sans"
+        class="bg-brand-dark/95 dark:bg-brand-dark/95 backdrop-blur-md border-b border-white/5 text-white/90 py-2 px-4 text-xs font-normal tracking-wide relative z-50 text-center font-sans"
         style="display: none;"
     >
         <div class="inline-flex items-center gap-2">
@@ -54,18 +54,24 @@
     {{ end }}
 
     <div
-        :class="scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md py-3.5 shadow-md border-b border-slate-200/30 dark:border-slate-800/30 text-slate-800 dark:text-white' : 'bg-transparent py-5 text-white border-b border-white/0'"
+        :class="scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md py-3.5 shadow-md border-b border-slate-200/30 dark:border-slate-800/30 text-black dark:text-white' : 'bg-transparent py-5 text-black border-b border-white/0'"
         class="w-full transition-all duration-300"
     >
         <div class="container flex items-center justify-between">
             <a href="{{ `/` | relURL }}" class="flex items-center">
                 {{ if .Site.Params.logo_image }}
-                    <img src="{{ .Site.Params.logo_image | relURL }}" alt="{{ .Site.Params.conf_short_name }} Logo" class="h-10 w-auto object-contain">
-                {{ else }}
-                    <span class="font-heading text-2xl font-extrabold tracking-wide text-inherit">
-                        {{ .Site.Params.logo_prefix }}<span class="text-brand-primary">{{ .Site.Params.logo_suffix }}</span>
-                    </span>
+                    <img
+                        src="{{ .Site.Params.logo_image | relURL }}"
+                        alt="{{ .Site.Params.conf_short_name }} Logo"
+                        class="h-10 w-auto object-contain"
+                    >
                 {{ end }}
+                <span
+                    class="font-heading"
+                    style="margin-left: 12px; color: var(--color-brand-accent); font-size: 24px; font-weight: 800; white-space: nowrap; -webkit-text-stroke: 1px black; paint-order: stroke fill;"
+                >
+                    {{ .Site.Params.conf_short_name }}
+                </span>
             </a>
             
             <!-- Hamburger Button -->
@@ -102,7 +108,7 @@
                             <button
                                 @click="if (window.innerWidth <= 768) open = !open"
                                 class="flex items-center justify-between w-full md:gap-1 font-medium transition-colors cursor-pointer py-1 {{ if $isParentActive }}border-b-2 md:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
-                                :class="scrolled ? ({{ if $isParentActive }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if $isParentActive }}'text-white! border-white!'{{ else }}'text-white/90 hover:text-white'{{ end }})"
+                                :class="scrolled ? ({{ if $isParentActive }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if $isParentActive }}'text-inherit! border-current!'{{ else }}'text-inherit'{{ end }})"
                             >
                                 <span>{{ .Name }}</span>
                                 <i class="fas fa-chevron-down text-[0.75em] transition-transform duration-200" :class="open ? 'rotate-180' : ''"></i>
@@ -165,7 +171,7 @@
                         <a
                             href="{{ .URL | relURL }}"
                             class="font-medium transition-colors py-1.5 block w-full md:w-auto max-md:border-b max-md:border-white/10 {{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}border-b-2 md:pb-0.5{{ else }}opacity-85 hover:opacity-100{{ end }}"
-                            :class="scrolled ? ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-white! border-white!'{{ else }}'text-white/90 hover:text-white'{{ end }})"
+                            :class="scrolled ? ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-brand-primary! border-brand-primary!'{{ else }}'text-inherit'{{ end }}) : ({{ if or (eq $relPermalink .URL) (and (eq .URL "/") ($current.IsHome)) }}'text-inherit! border-current!'{{ else }}'text-inherit'{{ end }})"
                         >
                             {{ .Name }}
                         </a>

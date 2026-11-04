@@ -33,6 +33,10 @@
         {{ with .Site.Params.text_style.heading_font_family }}--font-heading: '{{ . }}', sans-serif;{{ end }}
         {{ with .Site.Params.text_style.body_color }}--color-text-body-markdown: {{ . }};{{ end }}
         {{ with .Site.Params.text_style.heading_color }}--color-text-heading: {{ . }};{{ end }}
+        {{ with .Site.Params.text_style.accent_color }}--conference-accent: {{ . }};{{ end }}
+        {{ with .Site.Params.text_style.primary_hover_color }}--conference-primary-hover: {{ . }};{{ end }}
+        {{ with .Site.Params.text_style.dark_color }}--conference-dark: {{ . }};{{ end }}
+        {{ with .Site.Params.text_style.light_background_color }}--conference-bg-light: {{ . }};{{ end }}
         {{ with .Site.Params.text_style.link_color }}
             --color-link-default: {{ . }};
             --color-btn-primary-bg: {{ . }};
