@@ -3,9 +3,13 @@ title: "Abstract Classifications"
 url: "/authors/authors-classifications/"
 ---
 
+To be announced.
+
+<!-- 
+
 The abstract classifications for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
 
-<!-- When submitting abstracts via the JACoW Indico system, authors must select the primary **Main Classification (MC)** and **Sub-Classification** that best aligns with their research topic. This ensures appropriate assignment to review panels. 
+When submitting abstracts via the JACoW Indico system, authors must select the primary **Main Classification (MC)** and **Sub-Classification** that best aligns with their research topic. This ensures appropriate assignment to review panels. 
 
 ### Main Classifications (MC) & Tracks
 

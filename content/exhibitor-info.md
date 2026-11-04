@@ -3,15 +3,14 @@ title: "Exhibitor & Sponsor Prospectus"
 url: "/exhibitor/exhibitor-info/"
 ---
 
-<!-- The exhibitor and sponsor information for IPAC'28 will open in the coming months. Please check back regularly for updates. -->
+The exhibitor and sponsor information for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.
 
+<!-- 
 
 Welcome Industry Partners! We invite you to showcase your latest innovations, network with leading scientists, and establish technical partnerships at the **IPAC'28 Industrial Exhibition**.
 
-
 The exhibition will take place from **Monday, June 5** to **Friday, June 9, 2028**, in the Exhibition Hall of the Tokyo International Forum.
-
-
+ -->
 <!--
 ### Tiered Sponsorship Benefits
 

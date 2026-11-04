@@ -3,11 +3,10 @@ title: "Scientific Program"
 url: "/program/program-scientific"
 ---
 
-The scientific program for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+To be announced.
 
-
-
-<!-- The scientific program of IPAC'28 will run over five full days, covering a broad spectrum of accelerator science, particle beam physics, and cutting-edge engineering technologies. 
+<!-- 
+The scientific program of IPAC'28 will run over five full days, covering a broad spectrum of accelerator science, particle beam physics, and cutting-edge engineering technologies. 
 
 Below is the **Interactive Synoptic Program Timetable**. For detailed sessions, oral contributions, and poster lists, please reference the official JACoW Indico program repository.
 

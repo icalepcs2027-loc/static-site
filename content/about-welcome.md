@@ -3,6 +3,9 @@ title: "Welcome to IPAC'28 in Tokyo"
 url: "/about/about-welcome/"
 ---
 
+To be added.
+
+<!--
 It is our great pleasure to welcome you to the 19th International Particle Accelerator Conference (IPAC'28), which will be held from **June 4 to 9, 2028**, at the **Tokyo International Forum** in the heart of Tokyo, Japan. IPAC'28 is hosted by KEK in collaboration with RIKEN and several Japanese organizations.
 
 As one of the world's leading international conferences in accelerator science and technology, IPAC brings together researchers, engineers, industrial partners, early-career researchers and students from around the world. Organized collaboratively by the accelerator communities of Asia, Europe, and the Americas, the conference provides a unique forum for presenting the latest advances in accelerator research and development, sharing updates on existing facilities, discussing future projects and innovative technologies, and fostering the international collaborations that continue to drive our field forward.
@@ -19,3 +22,4 @@ Tokyo, one of the world's most dynamic and innovative cities, offers a unique bl
 
 **Yoichi Sato (KEK/J-PARC)**, *Local Organizing Committee Chair*
 
+-->

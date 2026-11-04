@@ -3,11 +3,14 @@ title: "Accommodation"
 url: "/travel/travel-accommodation/"
 ---
 
+To be announced.
+
+<!-- 
 The IPAC'28 Organizing Committee will not designate any official hotels or provide accommodation arrangements. Tokyo offers a wide variety of lodging options, ranging from luxury hotels to budget-friendly accommodations. Thanks to its safe environment and one of the world's most extensive and efficient public transportation networks, participants can conveniently access the conference venue from many areas of the city. Hotels within walking distance of the venue are also available and may be a convenient option. For information on transportation in Tokyo, please visit the official Tokyo Travel Guide:
 
 https://www.gotokyo.org/en/plan/getting-around/
 
-<!-- securing accommodation early is highly recommended as Tokyo is a very popular destination during June. Below is a curated list of recommended accommodations, categorized by proximity and budget. -->
+securing accommodation early is highly recommended as Tokyo is a very popular destination during June. Below is a curated list of recommended accommodations, categorized by proximity and budget. -->
 <!--
 {{< tab-container >}}
     {{< tab title="High Grade Hotels" >}}

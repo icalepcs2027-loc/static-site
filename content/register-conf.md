@@ -3,10 +3,13 @@ title: "Conference Registration"
 url: "/register/register-conf/"
 ---
 
-The registration procedure for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
-
+To be announced.
 
 <!-- 
+
+
+The registration procedure for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+
 This is the designated template page for **Conference Registration**. You can replace this placeholder content with the comprehensive details regarding the IPAC conference.
 
 

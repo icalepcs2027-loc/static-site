@@ -3,9 +3,12 @@ title: "Paper Preparation Guidelines"
 url: "/authors/authors-paper/"
 ---
 
-The paper preparation guidelines for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+To be announced.
 
 <!-- ----------------
+
+The paper preparation guidelines for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+
 All authors presenting at IPAC'28 must submit a contribution paper (maximum 3 pages for posters/contributed orals, 5 pages for plenary/invited talks). Papers must adhere strictly to the **JACoW (Joint Accelerator Conferences Website)** style templates.
 
 {{< tab-container >}}

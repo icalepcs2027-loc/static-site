@@ -3,9 +3,12 @@ title: "Visa Information"
 url: "/travel/travel-visa/"
 ---
 
+Under Construction.
+
+<!--
 Many countries have visa-exempt agreements with Japan. However, nationals of certain countries must obtain a visa before entering. Please check the Official Japanese Ministry of Foreign Affairs (MOFA) website at [Visa Information](https://www.mofa.go.jp/j_info/visit/visa/index.html).
 
-<!-- Most international visitors traveling to Japan for academic conferences require a short-term temporary visitor visa unless they hold passport nationalities with visa-exemption agreements. Please consult the guidelines below.
+ Most international visitors traveling to Japan for academic conferences require a short-term temporary visitor visa unless they hold passport nationalities with visa-exemption agreements. Please consult the guidelines below.
 
 {{< accordion title="1. Countries Exempt from Visa Requirements" >}}
 As of 2027, nationals of over 60 countries and regions (including the United States, Canada, European Union nations, Australia, United Kingdom, Singapore, etc.) who enter Japan for short-term stays (up to 90 days) for conference participation, business meetings, or tourism **do not need to apply for a visa** in advance.

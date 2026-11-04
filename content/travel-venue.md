@@ -3,6 +3,9 @@ title: "Venue"
 url: "/travel/travel-venue/"
 ---
 
+Under Construction
+
+<!--
 The conference will be held at Tokyo International Forum, one of Japan's premier convention and performing arts centers, located in the heart of Tokyo. Situated adjacent to Tokyo Station and within walking distance of Ginza and Marunouchi, the venue offers excellent access to major transportation hubs, hotels, restaurants, and shopping areas.
 
 Tokyo International Forum features modern conference facilities, spacious meeting rooms, and advanced technical infrastructure, providing an ideal environment for international scientific conferences. Its central location and convenient transportation links make it easily accessible from both Narita and Haneda airports.
@@ -11,9 +14,9 @@ For more information about the venue, please visit:
 
 https://www.t-i-forum.co.jp/en/
 
-<!-- ### Access
+ ### Access
 
-The venue is highly accessible via Tokyo's extensive public transportation network. Please refer to the official Tokyo Travel Guide for detailed transportation information: [https://www.gotokyo.org/en/plan/getting-around/](https://www.gotokyo.org/en/plan/getting-around/) -->
+The venue is highly accessible via Tokyo's extensive public transportation network. Please refer to the official Tokyo Travel Guide for detailed transportation information: [https://www.gotokyo.org/en/plan/getting-around/](https://www.gotokyo.org/en/plan/getting-around/) 
 
 
 ## Venue Layout
@@ -38,3 +41,4 @@ The main exhibition area where posters, industrial exhibits, and commercial boot
 https://www.t-i-forum.co.jp/en/facilities/e/
     {{< /tab >}}
 {{< /tab-container >}}
+-->

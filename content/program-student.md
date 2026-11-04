@@ -3,8 +3,11 @@ title: "Student Program"
 url: "/program/student/"
 ---
 
-The student program for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+To be announced.
+
 <!-- 
+The student program for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+
 IPAC'28 places a major emphasis on education and professional growth for the next generation of accelerator scientists and engineers. A highly rich, dedicated Student Program has been organized:
 
 ### Key Activities

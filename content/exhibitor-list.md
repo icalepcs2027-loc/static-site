@@ -6,10 +6,7 @@ url: "/exhibitor/exhibitor-list/"
 
 <!-- ## Exhibitors & Sponsors -->
 
-<!-- The exhibitor and sponsor information for IPAC'28 will open in the coming months. Please check back regularly for updates. -->
-
-
-We are deeply grateful for the generous support of our industrial partners and exhibitors. Their contributions are essential to enabling student travel grants and powering the world-class technical program at IPAC'28.
+The exhibitor and sponsor information for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.
 
 <!--
 {{< sponsors-grid >}} -->

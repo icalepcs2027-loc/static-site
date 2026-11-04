@@ -3,10 +3,10 @@ title: "Ongoing Accelerator Projects"
 url: "/exhibitor/exhibitor-project/"
 ---
 
-The exhibitor and sponsor information for IPAC'28 will open in the coming months. Please check back regularly for updates.
+The exhibitor and sponsor information for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.
 
 <!-- 
-The industrial exhibition at IPAC'28 provides a unique portal connecting global vendors with major upcoming national and international particle accelerator projects.
+The industrial exhibition at ICALEPCS 2027 provides a unique portal connecting global vendors with major upcoming national and international particle accelerator projects.
 
 ### Prominent Scientific Infrastructures & Upgrades
 

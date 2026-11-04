@@ -3,11 +3,11 @@ title: "Accelerator Prizes"
 url: "/program/prizes/"
 ---
 
-The accelerator prizes for IPAC'28 will be announced closer to the conference date. Please check back regularly for updates.
+To be announced.
 
 <!-- Every year, the International Particle Accelerator Conference honors exceptional achievements in the field through a series of internationally recognized accelerator awards and prizes. -->
 <!--
-### Prestigious IPAC'28 Accelerator Prizes
+### Prestigious ICALEPCS 2027 Accelerator Prizes
 
 - **The Rolf Wideröe Prize**
   For outstanding work in the accelerator field without age limit.

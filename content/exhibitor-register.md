@@ -3,11 +3,11 @@ title: "Exhibitor Registration"
 url: "/exhibitor/exhibitor-register/"
 ---
 
-The exhibitor registration for IPAC'28 will open in the coming months. Please check back regularly for updates.
+The exhibitor registration for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.
 
-
-Industrial exhibition booths booking for **IPAC'28** will launch on **late 2027**. Booking is processed strictly on a first-come, first-served basis via our exhibitor reservation system.
 <!--
+Industrial exhibition booths booking for **ICALEPCS 2027** will launch on **late 2027**. Booking is processed strictly on a first-come, first-served basis via our exhibitor reservation system.
+
 ### Exhibition Booth Options
 
 - **Option A: Premium Shell Scheme (3m x 3m - 9sqm)**  

@@ -3,7 +3,7 @@ title: "Contact Us"
 url: "/contact/"
 ---
 
-If you have any questions or require administrative assistance regarding IPAC'28, please consult us at contact@ipac28.org.
+If you have any questions or require administrative assistance regarding ICALEPCS 2027, please consult us at `contact@icalepcs2027.org`.
 
 <!-- ### Conference Help Desks
 
@@ -24,8 +24,10 @@ If you have any questions or require administrative assistance regarding IPAC'28
   - **Email**: `exhibitor@ipac28.org`
 
 --- -->
-
+<!-- 
 ### Local Secretariat Headquarters
+
 - **Office Address**: Oho 1-1, Tsukuba, Ibaraki 305-0801, Japan.
 - **Operating Hours**: Monday to Friday, 09:00 - 17:00 JST (UTC+9).
-<!-- - **Telephone**: `To be added`. -->
+- **Telephone**: `To be added`.
+ -->

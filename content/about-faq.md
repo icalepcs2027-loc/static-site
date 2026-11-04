@@ -3,14 +3,14 @@ title: "Frequently Asked Questions (FAQ)"
 url: "/about/about-faq/"
 ---
 
-Find quick answers to common questions about abstract submission, registration, travel, and accommodation for IPAC'28.
+Find quick answers to common questions about abstract submission, registration, travel, and accommodation for ICALEPCS 2027.
 
 <div class="faq-container">
 
 ### General & Abstracts
 
-{{< accordion title="When and where will IPAC'28 take place?" >}}
-IPAC'28 will be held from **June 4-9, 2028**, at the **Tokyo International Forum (TIF)**, located in the heart of Tokyo, Japan.
+{{< accordion title="When and where will ICALEPCS 2027 take place?" >}}
+ICALEPCS 2027 will be held from **October 4-8, 2027**, at the **Mito City Civic Center**, located in the Mito city, Ibaraki prefecture, Japan.
  <!-- Satellite meetings and registration check-ins will commence on Sunday, June 4, 2028. -->
 {{< /accordion >}}
 
@@ -39,7 +39,6 @@ To be announced.
 {{< accordion title="Do I need a visa to enter Japan?" >}}
 
 For more information please refer to [visa information](/travel/travel-visa).
-
 
 {{< /accordion >}}
 
