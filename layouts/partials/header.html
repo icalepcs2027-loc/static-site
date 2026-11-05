@@ -200,7 +200,11 @@
                         </a>
                     {{ end }}
                 {{ end }}
-                <a href="{{ .Site.Params.registration_link | relURL }}" class="mt-4 nav:mt-0 w-full nav:w-auto text-center inline-block px-5 py-2 rounded-full font-bold text-sm bg-brand-primary text-white! hover:bg-brand-primary-hover shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">Register</a>
+                {{ with .Site.Params.registration_link }}
+                <a href="{{ . | strings.TrimPrefix "/" | relURL }}" class="mt-4 nav:mt-0 w-full nav:w-auto text-center inline-block px-5 py-2 rounded-full font-bold text-sm bg-brand-primary text-white! hover:bg-brand-primary-hover shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">Register</a>
+                {{ else }}
+                <span aria-disabled="true" title="Registration details will be announced soon." class="mt-4 nav:mt-0 w-full nav:w-auto text-center inline-block px-5 py-2 rounded-full font-bold text-sm bg-brand-primary text-white! shadow-md">Register</span>
+                {{ end }}
             </nav>
         </div>
     </div>

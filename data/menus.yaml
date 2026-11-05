@@ -35,15 +35,12 @@ main:
         url: "/social/"
       - name: "Satellite Workshops"
         url: "/satellite/"
-  - name: "Registration"
-    url: "/register"
-    children:
-      - name: "Conference Registration"
-        url: "/conference/"
-      - name: "Student Grants"
-        url: "/student/"
-      - name: "Technical Tour"
+      - name: "Facility Tours"
         url: "/tour/"
+  
+  - name: "Registration"
+    url: "/registration"
+
   - name: "Authors"
     url: "/authors"
     children:

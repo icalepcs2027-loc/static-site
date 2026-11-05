@@ -80,7 +80,7 @@ Define the core metadata under the `[params]` namespace:
   conf_start_date = "2028-06-05T08:00:00+09:00"  # Targets the homepage countdown timer
   conf_location = "Tokyo International Forum, Tokyo, Japan"
   email = "contact@ipac28.org"
-  registration_link = "/register/conference/"
+  registration_link = "" # Set the external registration URL when available
 ```
 
 ### Branding Logos and Toggles

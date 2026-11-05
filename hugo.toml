@@ -39,7 +39,8 @@ conf_dates = "October 4-8, 2027"
 conf_start_date = "2027-10-04T08:00:00+09:00"
 conf_location = "Mito Civic Senter, Ibaraki, Japan"
 email = "contact@icalepcs2027.org"
-registration_link = "/register/conference/"
+# 外部登録サイトのURLを指定します。未定の間は空欄（Registerボタンは無効）。
+registration_link = "https://indico.jacow.org/event/139/"
 
 # ---------------------------------------------------------------------------
 # トップページの画像・表示切り替え / Appearance & Toggles
