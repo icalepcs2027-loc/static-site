@@ -59,6 +59,8 @@ stats.exhibitors = "80+"
 # 上部のお知らせバナー / Announcement Banner
 # ---------------------------------------------------------------------------
 enable_announcement = true
+# ×で閉じた後、再表示するまでの時間（単位: 時間、省略時は12）
+announcement_dismiss_hours = 12
 # announcement_text = "Abstract submission will open on Oct 1, 2027!"
 # announcement_link = "/authors/abstract/"
 announcement_text = "Welcome to the ICALEPCS 2027 Website!"

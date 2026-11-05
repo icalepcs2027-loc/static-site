@@ -119,9 +119,12 @@ Renders a dismissible banner at the top of the header:
 
 ```toml
   enable_announcement = true
+  announcement_dismiss_hours = 12
   announcement_text = "Abstract submission will open on Oct 1, 2027!"
   announcement_link = "/about/welcome/"
 ```
+
+Closing the banner stores an expiry timestamp in `localStorage`. It stays hidden for `announcement_dismiss_hours` hours (default: 12), including across reloads, and becomes eligible to appear again when the timer expires. The existing scroll condition still hides it below the top of the page. Old permanent `"true"` dismissal values are treated as expired. If browser storage is unavailable, dismissal still works for the current page.
 
 ### Important Dates Database
 

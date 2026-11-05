@@ -5,16 +5,38 @@
     x-data="{
         scrolled: false,
         mobileMenuOpen: false,
-        dismissed: localStorage.getItem('announcement-dismissed') === 'true',
+        dismissed: false,
+        dismissedUntil: 0,
+        dismissalTimer: null,
+        dismissalDurationMs: {{ mul (site.Params.announcement_dismiss_hours | default 12) 3600000 }},
+        updateDismissal() {
+            clearTimeout(this.dismissalTimer);
+            const remaining = this.dismissedUntil - Date.now();
+            this.dismissed = remaining > 0;
+            if (this.dismissed) {
+                this.dismissalTimer = setTimeout(() => this.updateDismissal(), Math.min(remaining, 2147483647));
+            }
+        },
         dismiss() {
-            this.dismissed = true;
-            localStorage.setItem('announcement-dismissed', 'true');
+            this.dismissedUntil = Date.now() + this.dismissalDurationMs;
+            this.updateDismissal();
+            try {
+                localStorage.setItem('announcement-dismissed', String(this.dismissedUntil));
+            } catch (error) {}
         },
         init() {
+            try {
+                const saved = Number(localStorage.getItem('announcement-dismissed'));
+                this.dismissedUntil = Number.isFinite(saved) ? saved : 0;
+            } catch (error) {}
+            this.updateDismissal();
             window.addEventListener('scroll', () => {
                 this.scrolled = window.scrollY > 50;
             });
             this.scrolled = window.scrollY > 50;
+        },
+        destroy() {
+            clearTimeout(this.dismissalTimer);
         }
     }"
     class="fixed top-0 left-0 w-full z-40 transition-all duration-300"
