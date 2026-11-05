@@ -1,27 +1,20 @@
 ---
-title: "Accelerator Prizes"
+title: "ICALEPCS Prizes"
 url: "/program/prizes/"
 ---
 
-To be announced.
+For detailed information on the ICALEPCS awards, please visit the [ICALEPCS Awards page](https://www.icalepcs.org/icalepcs-awards/).
 
-<!-- Every year, the International Particle Accelerator Conference honors exceptional achievements in the field through a series of internationally recognized accelerator awards and prizes. -->
-<!--
-### Prestigious ICALEPCS 2027 Accelerator Prizes
+### ICALEPCS Early Career Award
 
-- **The Rolf Wideröe Prize**
-  For outstanding work in the accelerator field without age limit.
+The ICALEPCS Early Career Award will be granted every two years at the biennial International Conference on Accelerator and Large Experimental Physics Control Systems (ICALEPCS). The ICALEPCS Award is conferred to one early career (defined by university degree awarded within the last ten years) controls systems professionals who made exceptional contributions in the field of Control and data acquisition Systems in large scientific installations.
 
-- **The Gersh Budker Prize**
-  For a recent, significant, original contribution to the accelerator field, with no age limit.
+### ICALEPCS Leadership in Mentoring Award
 
-- **The Frank Sacherer Prize**
-  For an individual in the early part of their career who has made a significant, original contribution to the accelerator field.
+The ICALEPCS LMA award is meant to honor one (or more) practitioner who, throughout his or her career, has demonstrated leadership and commitment towards attracting and nurturing talents and, by their dedication to training and mentoring activities, have made the community grow, spreading and extending the global knowledge and the teamwork across different facilities.
 
-- **The Outstanding Student Poster Prizes**
-  Awarded to two students for high-quality scientific posters presented during the poster sessions.
+### ICALEPCS Lifetime Achievement Award
 
----
+The ICALEPCS Lifetime Achievement Award is meant to honor an individual (or individuals) who throughout their careers have made invaluable and lasting contributions to the field of control systems for large experimental physics facilities. The scope of this award reaches beyond the successful completion of a single project or even several projects. The aim is to recognize those who through their vision, leadership, technical excellence, and a willingness to think beyond a single laboratory or even a country have influenced the international practice of control system development.
 
-### Nomination Submissions
-Nominations for the Wideröe, Budker, and Sacherer prizes must be submitted using the official nomination template before **November 1, 2027**. Detailed criteria, selection jury panels, and award templates are `To be added`. -->
+Due to the nature of the award, it will not necessarily be presented at every ICALEPCS. This is meant as a recognition and celebration of exceptional and career-long contribution and as such it should be awarded only when such individuals have been clearly identified.
