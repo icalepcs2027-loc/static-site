@@ -73,7 +73,7 @@ announcement_link = "/about/welcome/"
 date_fmt = "January 2, 2006"
 
 # 日程データ: data/schedules/important_dates.yaml
-# 委員会データ: data/committees/*.yaml
+# 委員会データ: data/committees.yaml
 
 # ============================================================================
 # 4. ニュース・更新情報 / News & Announcements

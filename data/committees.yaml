@@ -1,0 +1,119 @@
+# 委員会は書いた順に表示されます。項目を移動・追加・削除して構成を変更できます。
+# hidden: true は委員会全体を非表示、hide_members: true は一般メンバーのみ非表示です。
+# chairs / members は空欄・省略・[] のいずれでも構いません。id は任意です。
+
+- id: "conference_chair"
+  title: "Conference Chairs"
+  hide_members: false
+
+  # chairs / members にメンバー情報を追加してください。
+  chairs:
+    - name: "Masanori"
+      surname: "Satoh"
+      institution: "KEK"
+      avatar: "/img/masanoris.png"
+
+
+    - name: "Shuei"
+      surname: "Yamada"
+      institution: "KEK/J-PARC"
+      avatar: "/img/shueiy.png"
+  members:
+
+- id: "iec"
+  title: "ICALEPCS Executive Committee (IEC)"
+  hide_members: false
+
+  # chairs / members にメンバー情報を追加してください。
+  chairs: []
+  members: []
+
+- id: "isac"
+  title: "International Scientific Advisory Committee (ISAC)"
+  hide_members: false
+
+  # chairs / members にメンバー情報を追加してください。
+  chairs: []
+  members: []
+
+- id: "ssc"
+  title: "Site Selection Committee (SSC)"
+  hide_members: false
+
+  # chairs / members にメンバー情報を追加してください。
+  chairs: []
+  members: []
+
+- id: "loc"
+  title: "Local Organizing Committee (LOC)"
+  hide_members: false
+
+  chairs:
+    - name: "Hitoshi"
+      surname: "Sugimura"
+      institution: "KEK"
+      desc: "LOC Chair"
+      avatar: "/img/hitoshis.png"
+
+  members:
+
+    - name: "Fumiaki"
+      surname: "Ito"
+      institution: "KEK"
+
+    - name: "Takuro"
+      surname: "Kimura"
+      institution: "KEK/J-PARC"
+
+    - name: "Shinya"
+      surname: "Sasaki"
+      institution: "KEK"
+
+    - name: "Di"
+      surname: "Wang"
+      institution: "KEK"
+
+    - name: "Shunto"
+      surname: "Ogasawara"
+      institution: "KEK"
+
+    - name: "Itsuka"
+      surname: "Satake"
+      institution: "KEK"
+
+    - name: "Kenichi"
+      surname: "Sato"
+      institution: "KEK/J-PARC"
+
+    - name: "Yang"
+      surname: "Ming"
+      institution: "KEK/J-PARC"
+
+    - name: "Yuichi"
+      surname: "Okayasu"
+      institution: "KEK"
+
+    - name: "Michiyo"
+      surname: "Oka"
+      institution: "KEK"
+
+    - name: "Fusashi"
+      surname: "Miyahara"
+      institution: "KEK"
+
+    - name: "Masaaki"
+      surname: "Sakamoto"
+      institution: "KEK"
+
+    - name: "Yasutoshi"
+      surname: "Kuriyama"
+      institution: "J-PARC/JAEA"
+
+    - name: "Hiroki"
+      surname: "Takahashi"
+      institution: "J-PARC/JAEA"
+
+    - name: "Akihiro"
+      surname: "Shirakawa"
+      institution: "KEK"
+      desc: "Editor in Chief"

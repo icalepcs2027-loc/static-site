@@ -1,13 +1,7 @@
-{{ $committees := slice
-    hugo.Data.committees.conference_chair
-    hugo.Data.committees.iec
-    hugo.Data.committees.isac
-    hugo.Data.committees.ssc
-    hugo.Data.committees.loc
-}}
+{{ $committees := hugo.Data.committees | default (slice) }}
 
 {{ range $committees }}
-    {{ if . }}
+    {{ if and . (not .hidden) }}
     {{ $chairs := .chairs | default (slice) }}
     {{ $members := .members | default (slice) }}
     {{ $hideMembers := .hide_members }}

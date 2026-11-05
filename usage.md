@@ -185,29 +185,26 @@ Edit `data/sponsors.yaml`. The `sponsors-grid` shortcode renders sponsor graphic
 
 ### Organizing Committees
 
-Edit the YAML files under `data/committees/`. The `committees-list` shortcode displays them in this order:
-
-1. `conference_chair.yaml`: Conference Chairs
-2. `iec.yaml`: ICALEPCS Executive Committee (IEC)
-3. `isac.yaml`: International Scientific Advisory Committee (ISAC)
-4. `ssc.yaml`: Site Selection Committee (SSC)
-5. `loc.yaml`: Local Organizing Committee (LOC)
+Edit the list in `data/committees.yaml`. Committees appear in file order: move, add, or remove whole list entries to change the structure. No template changes are needed. `title` is the displayed committee name; `id` is optional and is not used for display order or layout. Set `hidden: true` to hide an entire committee, including chairs.
 
 Add highlighted chairs under `chairs` and other members under `members`. Empty committees display "To Be Announced". Set `hide_members: true` to hide the regular member list while retaining any chairs. `location`, `desc`, and `avatar` are optional.
 
 Both `chairs` and `members` may be omitted, left blank, or set to `null` or `[]`; all are treated as empty lists. If chairs are present and members are empty, only the chairs are displayed.
 
 ```yaml
-id: "iec"
-title: "ICALEPCS Executive Committee (IEC)"
-hide_members: false
-chairs: []
-members:
-  - name: "Given name"
-    surname: "Family name"
-    institution: "Institution"
-    location: "Country"
-    desc: "Role"
+- title: "New Committee"
+  chairs: []
+  members:
+    - name: "Given name"
+      surname: "Family name"
+      institution: "Institution"
+      location: "Country"
+      desc: "Role"
+
+- title: "Another Committee"
+  hidden: true
+  chairs: []
+  members: []
 ```
 
 ---

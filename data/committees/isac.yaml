@@ -1,7 +1,0 @@
-id: "isac"
-title: "International Scientific Advisory Committee (ISAC)"
-hide_members: false
-
-# Fill chairs and members using the same fields as loc.yaml.
-chairs: []
-members: []

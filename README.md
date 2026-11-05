@@ -2,7 +2,7 @@
 
 A customizable Hugo Extended template tailored for large-scale academic and scientific conferences, styled with Tailwind CSS v4. It features a responsive layout, frosted glassmorphism navigation, dynamic timelines, and committee listings. 
 
-Branding, colors, and display settings are configured in `hugo.toml`. News (`data/news.yaml`), sponsors (`data/sponsors.yaml`), important dates (`data/schedules/important_dates.yaml`), and committees (`data/committees/*.yaml`) are managed separately from the layout templates.
+Branding, colors, and display settings are configured in `hugo.toml`. News (`data/news.yaml`), sponsors (`data/sponsors.yaml`), important dates (`data/schedules/important_dates.yaml`), and committees (`data/committees.yaml`) are managed separately from the layout templates.
 
 ---
 
