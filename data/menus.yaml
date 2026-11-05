@@ -33,7 +33,7 @@ main:
         url: "/prizes/"
       - name: "Social Events"
         url: "/social/"
-      - name: "Satellite Events"
+      - name: "Satellite Workshops"
         url: "/satellite/"
   - name: "Registration"
     url: "/register"
