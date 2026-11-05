@@ -12,3 +12,6 @@ Thumbs.db
 
 # Optional IDE files
 .vscode/
+
+# deploy script for test server
+test-deploy.sh
