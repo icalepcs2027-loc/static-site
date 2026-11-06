@@ -44,6 +44,18 @@
   chairs: []
   members: []
 
+- id: "Editional Team"
+  title: "Editional Team"
+  hide_members: false
+
+  chairs: 
+    - name: "Akihiro"
+      surname: "Shirakawa"
+      institution: "KEK"
+      avatar: "/img/akihiros.png"
+      
+  members: []
+
 - id: "loc"
   title: "Local Organizing Committee (LOC)"
   hide_members: false
