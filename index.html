@@ -142,51 +142,84 @@
 
         /* Main Container */
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 1.5rem;
             flex: 1;
         }
 
-        /* Header */
-        header {
-            text-align: center;
-            padding: 4rem 1rem 2.5rem 1rem;
+        /* Split Hero Section: Left Logo & Branding, Right Welcome */
+        .hero-split {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 2.75rem;
+            align-items: start;
+            margin: 2rem 0 3.5rem 0;
         }
 
-        .logo-placeholder {
-            font-size: clamp(2.5rem, 5vw, 3.2rem);
+        .hero-left {
+            position: sticky;
+            top: 85px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .conference-logo {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            border-radius: 24px;
+            background: #ffffff;
+            padding: 14px;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.28), 0 0 0 1px var(--card-border);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin: 0 auto 1.5rem auto;
+            display: block;
+        }
+
+        .conference-logo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 34px -4px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--primary);
+        }
+
+        .brand-text .logo-placeholder {
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
             font-weight: 800;
             letter-spacing: 2px;
             background: linear-gradient(135deg, #38bdf8, #0284c7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.15;
         }
 
-        h1 {
-            font-size: clamp(1.4rem, 3vw, 2.1rem);
+        .brand-text h1 {
+            font-size: 1.18rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             color: var(--text);
-            line-height: 1.35;
+            line-height: 1.45;
         }
 
-        .subtitle {
-            font-size: 1.15rem;
+        .brand-text .subtitle {
+            font-size: 0.95rem;
             color: var(--text-muted);
-            max-width: 720px;
-            margin: 0 auto;
+            line-height: 1.55;
+            margin: 0;
         }
 
         /* Countdown Timer */
         .countdown-container {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2.5rem auto 0 auto;
-            max-width: 650px;
+            border-radius: 14px;
+            padding: 1.75rem 2rem;
+            margin: 0 auto 3.5rem auto;
+            max-width: 780px;
             box-shadow: var(--shadow-sm);
         }
 
@@ -236,7 +269,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin: 3.5rem 0;
+            margin: 0 0 3.5rem 0;
         }
 
         .card {
@@ -282,31 +315,79 @@
             text-decoration: underline;
         }
 
-        /* About Section */
+        /* Welcome Section */
+        .welcome-section,
         .about-section {
             background-color: var(--about-bg);
             padding: 3rem;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid var(--card-border);
-            margin-bottom: 3.5rem;
+            margin-bottom: 0;
             box-shadow: var(--shadow-sm);
         }
 
+        .welcome-section h2,
         .about-section h2 {
             font-size: 1.6rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             color: var(--text);
         }
 
+        .welcome-section p,
         .about-section p {
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.15rem;
             font-size: 1.05rem;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        .about-section p:last-child {
-            margin-bottom: 0;
+        .text-link {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .text-link:hover {
+            color: var(--primary-dark);
+        }
+
+        .welcome-signoff {
+            margin-top: 2.25rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .welcome-closing {
+            font-size: 1.2rem !important;
+            font-weight: 700;
+            color: var(--text) !important;
+            margin-bottom: 1.75rem !important;
+        }
+
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem 2rem;
+        }
+
+        .committee-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .committee-role {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .committee-name {
+            font-size: 1rem;
+            color: var(--text);
+            font-weight: 500;
         }
 
         /* Subtle Calendar Section */
@@ -352,10 +433,31 @@
             margin-top: auto;
         }
 
-        @media (max-width: 768px) {
-            header { padding: 2.5rem 1rem 1.5rem 1rem; }
-            .about-section { padding: 1.75rem 1.25rem; }
-            .card { padding: 1.75rem 1.25rem; }
+        @media (max-width: 960px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 1.5rem 0 2.5rem 0;
+            }
+            .hero-left {
+                position: static;
+            }
+            .conference-logo {
+                max-width: 270px;
+                border-radius: 20px;
+                padding: 12px;
+            }
+            .welcome-section,
+            .about-section {
+                padding: 1.75rem 1.25rem;
+            }
+            .card {
+                padding: 1.75rem 1.25rem;
+            }
+            .countdown-container {
+                padding: 1.25rem 1rem;
+                margin: 0 auto 2.5rem auto;
+            }
         }
     </style>
 </head>
@@ -387,44 +489,88 @@
     </nav>
 
     <div class="container">
-        <header>
-            <div class="logo-placeholder">ICALEPCS 2027</div>
-            <h1>The 21st International Conference on Accelerator and Large Experimental Physics Control Systems</h1>
-            <p class="subtitle">Bringing together worldwide experts to discuss the latest advancements in control systems for large-scale scientific facilities.</p>
-
-            <!-- Live Countdown Timer -->
-            <div class="countdown-container">
-                <div class="countdown-label">Conference Countdown</div>
-                <div class="countdown-grid">
-                    <div class="countdown-box">
-                        <div class="countdown-num" id="cdDays">--</div>
-                        <div class="countdown-text">Days</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-num" id="cdHours">--</div>
-                        <div class="countdown-text">Hours</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-num" id="cdMinutes">--</div>
-                        <div class="countdown-text">Minutes</div>
-                    </div>
-                    <div class="countdown-box">
-                        <div class="countdown-num" id="cdSeconds">--</div>
-                        <div class="countdown-text">Seconds</div>
-                    </div>
+        <!-- Split Top Section: Left Logo & Branding, Right Welcome -->
+        <div class="hero-split">
+            <div class="hero-left">
+                <img src="ICALEPCS2027_logo_mito_brush_YujiSyuku.png" alt="ICALEPCS 2027 Provisional Logo" class="conference-logo">
+                <div class="brand-text">
+                    <div class="logo-placeholder">ICALEPCS 2027</div>
+                    <h1>The 21st International Conference on Accelerator and Large Experimental Physics Control Systems</h1>
+                    <p class="subtitle">Bringing together worldwide experts to discuss the latest advancements in control systems for large-scale scientific facilities.</p>
                 </div>
             </div>
-        </header>
+
+            <div class="hero-right">
+                <section class="welcome-section" id="welcome">
+                    <h2>Welcome!</h2>
+                    <p>On behalf of the organizing committee, we are delighted to welcome you to Mito, Japan, for the 21st International Conference on Accelerator and Large Experimental Physics Control Systems, ICALEPCS 2027.</p>
+                    <p>ICALEPCS brings together control system specialists from major scientific facilities and industry, including particle accelerators, light sources, laser facilities, telescopes, and fusion devices. Since the first conference was held in 1987 in Villars-sur-Ollon, Switzerland, hosted by CERN, the series has rotated among three regions of the world: the Americas, Asia (including Oceania), and EMEA (Europe, the Middle East, and Africa). With each edition, the community has grown in the number of participants, institutions, and countries represented.</p>
+                    <p>With the help of the International Scientific Advisory Committee (ISAC), we are preparing a program that reflects the latest developments in our field. We hope the conference will give you the chance to meet experts from around the world, exchange ideas, and start new collaborations. We look forward to welcoming both familiar faces and those joining us for the first time.</p>
+                    <p>ICALEPCS 2027 is hosted by the High Energy Accelerator Research Organization (KEK). KEK operates SuperKEKB, the world’s highest-luminosity electron–positron collider, and the Photon Factory light sources, and runs the J-PARC proton accelerator complex jointly with the Japan Atomic Energy Agency (JAEA). Visit <a href="https://www.kek.jp/en/" target="_blank" rel="noopener noreferrer" class="text-link">KEK’s website</a> to learn more about its research programs.</p>
+                    <p>The conference will take place at the Mito Civic Hall in Mito, the capital of Ibaraki Prefecture. Mito is home to Kairakuen, one of the three great gardens of Japan, and lies within easy reach of both KEK in Tsukuba and J-PARC in Tokai.</p>
+                    <p>ICALEPCS has a long tradition of welcoming newcomers and students. The conference offers an open forum for discussion, and we encourage students to take an active part in it.</p>
+                    
+                    <div class="welcome-signoff">
+                        <p class="welcome-closing">We look forward to seeing you in Mito!</p>
+                        <div class="committee-grid">
+                            <div class="committee-item">
+                                <span class="committee-role">Conference Co-Chairs</span>
+                                <span class="committee-name">Masanori Satoh (KEK), Shuei Yamada (KEK)</span>
+                            </div>
+                            <div class="committee-item">
+                                <span class="committee-role">Local Organizing Committee Chair</span>
+                                <span class="committee-name">Hitoshi Sugimura (KEK)</span>
+                            </div>
+                            <div class="committee-item">
+                                <span class="committee-role">Program Chair</span>
+                                <span class="committee-name">Misaki Komiyama (RIKEN)</span>
+                            </div>
+                            <div class="committee-item">
+                                <span class="committee-role">Program Co-Chair</span>
+                                <span class="committee-name">Yingbing Yan (SARI)</span>
+                            </div>
+                            <div class="committee-item">
+                                <span class="committee-role">IEC and ISAC Chair</span>
+                                <span class="committee-name">Timo Korhonen (ESS)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-container">
+            <div class="countdown-label">Conference Countdown</div>
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <div class="countdown-num" id="cdDays">--</div>
+                    <div class="countdown-text">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-num" id="cdHours">--</div>
+                    <div class="countdown-text">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-num" id="cdMinutes">--</div>
+                    <div class="countdown-text">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-num" id="cdSeconds">--</div>
+                    <div class="countdown-text">Seconds</div>
+                </div>
+            </div>
+        </div>
 
         <section class="info-grid">
             <div class="card">
                 <div>
                     <h2>Location</h2>
-                    <p class="card-main">Mito Civic Center (水戸市民会館)</p>
+                    <p class="card-main">Mito Civic Hall (水戸市民会館)</p>
                     <p class="card-sub">Mito City, Ibaraki, Japan</p>
                 </div>
                 <div>
-                    <a href="https://maps.google.com/?q=Mito+Civic+Center,+1-7-1+Izumi-cho,+Mito,+Ibaraki,+Japan" target="_blank" rel="noopener noreferrer" class="card-link">View on Google Maps &rarr;</a>
+                    <a href="https://maps.google.com/?q=Mito+Civic+Hall,+1-7-1+Izumi-cho,+Mito,+Ibaraki,+Japan" target="_blank" rel="noopener noreferrer" class="card-link">View on Google Maps &rarr;</a>
                 </div>
             </div>
 
@@ -437,18 +583,12 @@
             </div>
         </section>
 
-        <section class="about-section">
-            <h2>About the Conference</h2>
-            <p>ICALEPCS is the premier conference dedicated to the design, human interface, and operational aspects of control systems for particle accelerators, synchrotrons, telescopes, fusion reactors, and other large-scale experimental physics facilities.</p>
-            <p>In 2027, the conference will head to Mito City's Civic Center in Ibaraki, Japan—a region deeply connected with cutting-edge scientific research institutions and rich cultural heritage. More details regarding the call for papers, registration timelines, and program will be announced soon.</p>
-        </section>
-
         <!-- Subtle Add to Calendar at bottom -->
         <div class="calendar-subtle">
             <span>Add to calendar:</span>
             <button id="btnAddToCalendar" title="Download .ics event file">iCalendar (.ics)</button>
             <span class="sep">|</span>
-            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ICALEPCS+2027+-+21st+International+Conference+on+Accelerator+and+Large+Experimental+Physics+Control+Systems&dates=20271004T000000Z/20271009T000000Z&details=ICALEPCS+2027+at+Mito+Civic+Center,+Mito,+Ibaraki,+Japan.+Website:+https://icalepcs2027.org/&location=Mito+Civic+Center,+1-7-1+Izumi-cho,+Mito,+Ibaraki+310-0026,+Japan" target="_blank" rel="noopener noreferrer">Google Calendar</a>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=ICALEPCS+2027+-+21st+International+Conference+on+Accelerator+and+Large+Experimental+Physics+Control+Systems&dates=20271004T000000Z/20271009T000000Z&details=ICALEPCS+2027+at+Mito+Civic+Hall,+Mito,+Ibaraki,+Japan.+Website:+https://icalepcs2027.org/&location=Mito+Civic+Hall,+1-7-1+Izumi-cho,+Mito,+Ibaraki+310-0026,+Japan" target="_blank" rel="noopener noreferrer">Google Calendar</a>
         </div>
 
         <footer>
@@ -517,7 +657,7 @@
                 'DTEND;VALUE=DATE:20271009',
                 'SUMMARY:ICALEPCS 2027 - 21st International Conference on Accelerator and Large Experimental Physics Control Systems',
                 'DESCRIPTION:The 21st International Conference on Accelerator and Large Experimental Physics Control Systems\\nWebsite: https://icalepcs2027.org/',
-                'LOCATION:Mito Civic Center (水戸市民会館), 1-7-1 Izumi-cho, Mito, Ibaraki 310-0026, Japan',
+                'LOCATION:Mito Civic Hall (水戸市民会館), 1-7-1 Izumi-cho, Mito, Ibaraki 310-0026, Japan',
                 'STATUS:CONFIRMED',
                 'TRANSP:OPAQUE',
                 'END:VEVENT',
