@@ -3,23 +3,35 @@ title: "Welcome to ICALEPCS 2027"
 url: "/about/welcome/"
 ---
 
-To be added.
+Welcome!
 
-<!--
-It is our great pleasure to welcome you to the 19th International Particle Accelerator Conference (IPAC'28), which will be held from **June 4 to 9, 2028**, at the **Tokyo International Forum** in the heart of Tokyo, Japan. IPAC'28 is hosted by KEK in collaboration with RIKEN and several Japanese organizations.
+On behalf of the organizing committee, we are delighted to welcome you to Mito, Japan, for the 21st International Conference on Accelerator and Large Experimental Physics Control Systems, ICALEPCS 2027.
 
-As one of the world's leading international conferences in accelerator science and technology, IPAC brings together researchers, engineers, industrial partners, early-career researchers and students from around the world. Organized collaboratively by the accelerator communities of Asia, Europe, and the Americas, the conference provides a unique forum for presenting the latest advances in accelerator research and development, sharing updates on existing facilities, discussing future projects and innovative technologies, and fostering the international collaborations that continue to drive our field forward.
+ICALEPCS brings together control system specialists from major scientific facilities and industry, including particle accelerators, light sources, laser facilities, telescopes, and fusion devices. Since the first conference was held in 1987 in Villars-sur-Ollon, Switzerland, hosted by CERN, the series has rotated among three regions of the world: the Americas, Asia (including Oceania), and EMEA (Europe, the Middle East, and Africa). With each edition, the community has grown in the number of participants, institutions, and countries represented.
 
-Accelerator science and technology are essential to addressing many of today's scientific and societal challenges. Particle accelerators serve as indispensable tools for discoveries in particle and nuclear physics, photon science, materials research, life science, and numerous industrial applications. IPAC'28 will offer a comprehensive scientific program covering the latest achievements in accelerator science, technology, and applications while providing outstanding opportunities for scientific exchange and professional networking.
+With the help of the International Scientific Advisory Committee (ISAC), we are preparing a program that reflects the latest developments in our field. We hope the conference will give you the chance to meet experts from around the world, exchange ideas, and start new collaborations. We look forward to welcoming both familiar faces and those joining us for the first time.
 
-Tokyo, one of the world's most dynamic and innovative cities, offers a unique blend of cutting-edge technology, rich cultural heritage, and renowned hospitality. The conference venue, Tokyo International Forum, is centrally located, providing convenient access to Tokyo's historic landmarks, vibrant neighborhoods, outstanding cuisine, and a world-class public transportation system. We hope that your visit will be both scientifically rewarding and culturally memorable. On behalf of the Organizing Committee, we cordially invite you to participate in IPAC'28 and contribute to making IPAC'28 a stimulating, inspiring, and memorable conference for the entire accelerator community. We look forward to welcoming you to Tokyo in June 2028.
+ICALEPCS 2027 is hosted by the High Energy Accelerator Research Organization (KEK). KEK operates SuperKEKB, the world’s highest-luminosity electron–positron collider, and the Photon Factory light sources, and runs the J-PARC proton accelerator complex jointly with the Japan Atomic Energy Agency (JAEA). Visit KEK’s website (KEKへのリンク) to learn more about its research programs.
 
+The conference will take place at the Mito Civic Hall in Mito, the capital of Ibaraki Prefecture. Mito is home to Kairakuen, one of the three great gardens of Japan, and lies within easy reach of both KEK in Tsukuba and J-PARC in Tokai.
 
+ICALEPCS has a long tradition of welcoming newcomers and students. The conference offers an open forum for discussion, and we encourage students to take an active part in it.
 
-**Tadashi Koseki (KEK)**, *Organizing Committee Chair*
+We look forward to seeing you in Mito!
 
-**Naruhiko Sakamoto (RIKEN/NRC)**, *Scientific Program Committee Chair*
+---
 
-**Yoichi Sato (KEK/J-PARC)**, *Local Organizing Committee Chair*
+**Masanori Satoh** (KEK) · **Shuei Yamada** (KEK)  
+*Conference Co-Chairs*
 
--->
+**Hitoshi Sugimura** (KEK)  
+*Local Organizing Committee Chair*
+
+**Misaki Komiyama** (RIKEN)  
+*Program Chair*
+
+**Yingbing Yan** (SARI)  
+*Program Co-Chair*
+
+**Timo Korhonen** (ESS)  
+*IEC and ISAC Chair*
