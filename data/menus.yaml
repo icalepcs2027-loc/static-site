@@ -46,8 +46,6 @@ main:
     children:
       - name: "Abstract Submission"
         url: "/abstract/"
-      - name: "Classifications"
-        url: "/classifications/"
       - name: "Paper Preparation"
         url: "/paper/"
       - name: "Speaker Guidelines"
