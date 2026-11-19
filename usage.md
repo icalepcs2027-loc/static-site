@@ -234,7 +234,7 @@ RendersSPC, IOC, LOC, and SAB committees configured in `hugo.toml`, applying reg
 
 #### Sponsors Grid (`sponsors-grid`)
 
-Generates the partner logo grid categorized by tier, and attaches a downloadable prospectus section.
+Generates the Supporters directory from `data/sponsors.yaml`, with a heading per tier. Platinum and Gold display two companies per row with names; Platinum uses slightly larger logos and company names. Silver displays logos and company names in three columns with the final pair centered when there are five entries. Bronze displays five logos without visible company names per row, with horizontal scrolling on narrow screens. Empty tiers display "To be announced." Company links open in a new tab; all logos retain company names as image alternative text. Platinum, Gold, Silver, and Bronze cards use tier-specific pale backgrounds and borders. This layout is independent of the homepage sponsor section.
 
 ```markdown
 {{< sponsors-grid >}}
