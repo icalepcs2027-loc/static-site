@@ -1,6 +1,6 @@
 ---
-title: "Sponsorship Info"
-url: "/exhibitor/sponsorship/"
+title: "Exhibit & Sponsor"
+url: "/exhibitor/exhibit-and-sponsor/"
 ---
 
 

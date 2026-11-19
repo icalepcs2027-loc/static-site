@@ -166,7 +166,7 @@ Edit `data/news.yaml`. The three newest entries will display featured preview ca
 - date: "2026-05-15T00:00:00+09:00"
   title: "Exhibitor Prospectus Now Available"
   summary: "The exhibitor and sponsorship prospectus for IPAC'28 is now available..."
-  link: "/exhibitor/info/"
+  link: "/exhibitor/exhibit-and-sponsor/"
 ```
 
 ### Tiered Sponsors

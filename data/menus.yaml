@@ -52,15 +52,15 @@ main:
       - name: "Poster Guidelines"
         url: "/poster/"
 
-  - name: "Exhibitor"
+  - name: "Exhibition"
     url: "/exhibitor"
     children:
       - name: "ICALEPCS 2027 Supporters"
         url: "/list/"
-      - name: "Exhibition details"
-        url: "/info/"
-      - name: "Sponsorship Info"
-        url: "/sponsorship/"
+      - name: "Visit the Industrial Exhibition"
+        url: "/visit/"
+      - name: "Exhibit & Sponsor"
+        url: "/exhibit-and-sponsor/"
   - name: "Travel"
     url: "/travel"
     children:
@@ -82,8 +82,8 @@ footer_quick:
     url: "/key-dates"
   - name: "Scientific Program"
     url: "/program/scientific/"
-  - name: "Exhibition details"
-    url: "/exhibitor/info/"
+  - name: "Visit the Industrial Exhibition"
+    url: "/exhibitor/visit/"
   - name: "Organizing Committees"
     url: "/about/committees/"
 
