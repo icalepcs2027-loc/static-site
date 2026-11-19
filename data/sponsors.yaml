@@ -1,12 +1,86 @@
-# スポンサー一覧（トップページの表示は hugo.toml の enable_sponsors で切り替え）
-# name / logo / url: 必須、tier / tagline: 任意
-# tier: platinum / gold / silver / bronze / exhibitor
-# logo は static/ 以下の画像を /img/sponsors/... の形式で指定します。
+# ダミーのスポンサー一覧。社名とlogoは実際の情報に差し替えてください。
+# 表示順: platinum → gold → silver → bronze → exhibitor（同じtier内は記載順）。
+# トップページへの表示は hugo.toml の enable_sponsors で切り替えます。
 
-
-- name: "Dummy Test Sample Co.ltd."
-  logo: "/img/sponsors/ipac28_600x304.png"
-  url: "https://www.kek.jp"
+# platinum (2 slots)
+- name: "Platinum Beam Technologies"
   tier: "platinum"
-  tagline: "The dummy sponsor."
+  logo: "/img/sponsors/platinum.png"
+  url: "https://www.icalepcs.org/"
 
+- name: "Platinum Control Systems"
+  tier: "platinum"
+  logo: "/img/sponsors/platinum.png"
+  url: "https://www.icalepcs.org/"
+
+
+# gold (2 slots)
+- name: "Golden Orbit Instruments"
+  tier: "gold"
+  logo: "/img/sponsors/gold.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "Goldcrest Vacuum Technologies"
+  tier: "gold"
+  logo: "/img/sponsors/gold.png"
+  url: "https://www.icalepcs.org/"
+
+
+# silver (5 slots)
+- name: "Silverline Control Systems"
+  tier: "silver"
+  logo: "/img/sponsors/silver.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "Silverbeam Photonics"
+  tier: "silver"
+  logo: "/img/sponsors/silver.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "Silvergate RF Systems"
+  tier: "silver"
+  logo: "/img/sponsors/silver.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "Silverwave Cryogenics"
+  tier: "silver"
+  logo: "/img/sponsors/silver.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "Silverleaf Instrumentation"
+  tier: "silver"
+  logo: "/img/sponsors/silver.png"
+  url: "https://www.icalepcs.org/"
+
+
+# bronze (5 slots)
+- name: "BronzeBridge Automation"
+  tier: "bronze"
+  logo: "/img/sponsors/bronze.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "BronzePeak Magnetics"
+  tier: "bronze"
+  logo: "/img/sponsors/bronze.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "BronzeWave Electronics"
+  tier: "bronze"
+  logo: "/img/sponsors/bronze.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "BronzeBeam Diagnostics"
+  tier: "bronze"
+  logo: "/img/sponsors/bronze.png"
+  url: "https://www.icalepcs.org/"
+
+- name: "BronzeGate Vacuum Systems"
+  tier: "bronze"
+  logo: "/img/sponsors/bronze.png"
+  url: "https://www.icalepcs.org/"
+
+# exhibitor: 枠数未定。決まり次第、以下の形式で追加してください。
+# - name: "Exhibitor Example Technologies"
+#   tier: "exhibitor"
+#   logo: "/img/sponsors/exhibitor.png"
+#   url: "https://www.icalepcs.org/"

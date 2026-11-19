@@ -173,12 +173,13 @@ Edit `data/news.yaml`. The three newest entries will display featured preview ca
 
 Edit `data/sponsors.yaml`. The `sponsors-grid` shortcode renders sponsor graphics grouped by hierarchy tiers. The homepage reads the same data; its sponsor section is controlled by `params.enable_sponsors` in `hugo.toml`.
 
-* **tier options**: `"platinum"`, `"gold"`, `"silver"`, `"bronze"`, `"supporter"`.
+* **Data tier options**: `"platinum"`, `"gold"`, `"silver"`, `"bronze"`, `"exhibitor"`. Page-specific presentation is configured separately; YAML contains only company names, tiers, logo paths, and URLs.
+* The current dummy data contains 2 platinum, 2 gold, 5 silver, and 5 bronze entries. Exhibitor slots are undecided; add entries when available.
 
 ```yaml
 - name: "Quantum Dynamics Corp."
-  logo: "/img/sponsors/ipac28_600x304.png"
-  url: "https://example.com/quantum-dynamics"
+  logo: "/img/sponsors/platinum.png"
+  url: "https://www.icalepcs.org/"
   tier: "platinum"
   tagline: "Pioneering the next generation of particle accelerator power systems."
 ```
