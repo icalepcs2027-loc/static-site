@@ -73,7 +73,7 @@ announcement_link = "/about/welcome/"
 # Goの基準日時の書式を使用します。日程そのものの設定ではありません。
 date_fmt = "January 2, 2006"
 
-# 日程データ: data/schedules/important_dates.yaml
+# 日程データ: data/schedules.yaml
 # 委員会データ: data/committees.yaml
 
 # ============================================================================

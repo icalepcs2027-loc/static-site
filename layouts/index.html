@@ -137,16 +137,16 @@
     </div>
 </section>
 
-<!-- Important Dates Section -->
+<!-- Key Dates Section -->
 <section id="dates" class="py-24 bg-brand-bg-light">
     <div class="container">
         <div class="max-w-3xl mx-auto text-center mb-16 fade-up visible">
-            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-4 pb-4 relative inline-block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-brand-primary after:rounded-full">Upcoming Important Dates</h2>
+            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-4 pb-4 relative inline-block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-brand-primary after:rounded-full">Upcoming Key Dates</h2>
             <p class="text-slate-500 mt-2 text-base">Mark your calendars for these critical deadlines.</p>
         </div>
 
         <div class="max-w-2xl mx-auto mb-12">
-            {{ $schedule := partial "schedules/important-dates.html" (dict "items" hugo.Data.schedules.important_dates "now" now) }}
+            {{ $schedule := partial "schedules/important-dates.html" (dict "items" hugo.Data.schedules "now" now) }}
 
             {{ $dates_to_show := slice }}
             {{ if gt (len $schedule.upcoming) 0 }}
@@ -204,7 +204,7 @@
 
         <div class="text-center fade-up visible mt-10">
             <a href="{{ `key-dates/` | relURL }}" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-sm bg-transparent border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-200">
-                View All Important Dates <i class="fas fa-arrow-right text-[0.8em]"></i>
+                View All Key Dates <i class="fas fa-arrow-right text-[0.8em]"></i>
             </a>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <div class="relative border-l border-slate-200 dark:border-slate-800 ml-4 pl-8 space-y-12 my-8">
-    {{ $schedule := partial "schedules/important-dates.html" (dict "items" hugo.Data.schedules.important_dates "now" now) }}
+    {{ $schedule := partial "schedules/important-dates.html" (dict "items" hugo.Data.schedules "now" now) }}
     {{ range $schedule.all }}
     {{ $entry := . }}
     {{ with .event }}

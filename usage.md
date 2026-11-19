@@ -128,7 +128,7 @@ Closing the banner stores an expiry timestamp in `localStorage`. It stays hidden
 
 ### Important Dates Database
 
-Edit the milestones in `data/schedules/important_dates.yaml`. The homepage and timeline shortcode both read this data; their layout remains in `layouts/`. Date display formatting is controlled by `params.date_fmt` in `hugo.toml`.
+Edit the milestones in `data/schedules.yaml`. The homepage and timeline shortcode both read this data; their layout remains in `layouts/`. Date display formatting is controlled by `params.date_fmt` in `hugo.toml`.
 
 * **type options**: `"info"` (blue bubble), `"open"` (green bubble), `"close"` (red bubble for deadlines).
 * **date** (optional): Omit it, leave it empty, or use `null` for an undecided date. The date label becomes "To be announced" and the badge becomes "TBD" regardless of `type`. A specified date must be a valid timestamp, not the string "TBD".
@@ -218,7 +218,7 @@ Include these components directly inside any page content Markdown file.
 
 #### timelines (`full-dates-timeline`)
 
-Renders the timeline from the YAML list in `data/schedules/important_dates.yaml` (`hugo.Data.schedules.important_dates`).
+Renders the timeline from the YAML list in `data/schedules.yaml` (`hugo.Data.schedules`).
 
 ```markdown
 {{< full-dates-timeline >}}

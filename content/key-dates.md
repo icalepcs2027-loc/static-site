@@ -1,5 +1,5 @@
 ---
-title: "Keys Dates"
+title: "Key Dates"
 url: "/key-dates/"
 ---
 

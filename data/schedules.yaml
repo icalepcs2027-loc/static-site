@@ -1,0 +1,92 @@
+# 日付は日本時間。終了日の内部判定にはその日の23:59:59を使用します。
+# date が空欄なら未定。hidden: true で非表示。order が小さい項目から表示。
+# season は日時の代わりに表示するラベルです。
+
+- date: "2027-01-04T00:00:00+09:00"
+  order: 10
+  title: "ICALEPCS 2027 Website Opening"
+  type: "info"
+  description: "The ICALEPCS 2027 website is scheduled to launch on January 4, 2027."
+
+# 1月中旬の正確な開始日は未定。内部処理用の代表日として1月15日を使用。
+- date: "2027-01-15T00:00:00+09:00"
+  season: "Mid-January 2027"
+  order: 20
+  title: "Exhibition Registration Opens"
+  type: "open"
+  description: "Exhibition registration is scheduled to open in mid-January 2027."
+
+- date: "2027-03-01T00:00:00+09:00"
+  order: 30
+  title: "Abstract Submission Opens"
+  type: "open"
+  description: "Abstract submission opens."
+
+- date: "2027-03-01T00:00:00+09:00"
+  order: 40
+  title: "Early Registration Opens"
+  type: "open"
+  description: "Early registration opens."
+
+- date: "2027-05-31T23:59:59+09:00"
+  order: 50
+  title: "Abstract Submission Closes"
+  type: "close"
+  description: "Abstract submission closes."
+
+- date: "2027-05-31T23:59:59+09:00"
+  order: 60
+  title: "Early Registration Closes"
+  type: "close"
+  description: "Early registration closes."
+
+- date: "2027-06-01T00:00:00+09:00"
+  order: 70
+  title: "Regular Registration Opens"
+  type: "open"
+  description: "Regular registration opens."
+
+- date: "2027-07-31T23:59:59+09:00"
+  order: 80
+  title: "Regular Registration Closes"
+  type: "close"
+  description: "Regular registration closes."
+
+- date: "2027-08-01T00:00:00+09:00"
+  order: 90
+  title: "Late Registration Opens"
+  type: "open"
+  description: "Late registration opens."
+
+- date: "2027-08-31T23:59:59+09:00"
+  order: 100
+  title: "Exhibition Registration Closes"
+  type: "close"
+  description: "Exhibition registration closes."
+
+- date: "2027-08-31T23:59:59+09:00"
+  order: 110
+  title: "Late Registration Closes"
+  type: "close"
+  description: "Late registration closes."
+
+# 以下は日程未定・非表示の項目。
+- date: ""
+  order: 140
+  hidden: true
+  title: "Author Notification"
+  type: "info"
+  description: "Abstract decisions (Oral, Poster, or Rejection) are communicated to primary authors."
+
+- date: ""
+  order: 150
+  hidden: true
+  title: "Final Paper Submission Closes"
+  type: "close"
+  description: "All contributions must upload their final PDF and source files (LaTeX/Word) to the JACoW Scientific Repository for editorial checks."
+
+- date: "2027-10-04T08:00:00+09:00"
+  order: 160
+  title: "ICALEPCS 2027 Scientific Program"
+  type: "info"
+  description: "Timetable sessions, plenary keynotes, parallel talks, commercial exhibitions, and the official social banquet."
