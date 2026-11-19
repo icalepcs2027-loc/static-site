@@ -11,13 +11,13 @@
     - name: "Masanori"
       surname: "Satoh"
       institution: "KEK"
-      avatar: "/img/masanoris.png"
+      avatar: "/img/committees/masanoris.png"
 
 
     - name: "Shuei"
       surname: "Yamada"
       institution: "KEK/J-PARC"
-      avatar: "/img/shueiy.png"
+      avatar: "/img/committees/shueiy.png"
   members:
 
 - id: "iec"
@@ -52,7 +52,7 @@
     - name: "Akihiro"
       surname: "Shirakawa"
       institution: "KEK"
-      avatar: "/img/akihiros.png"
+      avatar: "/img/committees/akihiros.png"
       
   members: []
 
@@ -65,7 +65,7 @@
       surname: "Sugimura"
       institution: "KEK"
       desc: "LOC Chair"
-      avatar: "/img/hitoshis.jpg"
+      avatar: "/img/committees/hitoshis.jpg"
 
   members:
 

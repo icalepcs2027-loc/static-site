@@ -26,7 +26,10 @@ web/
 │   ├── css/
 │   │   └── style.css         # Target compiled CSS output (loaded by the template)
 │   ├── js/                   # Theme interactivity (lightboxes, timers, banners)
-│   └── img/                  # Logos, banners, graphics
+│   └── img/
+│       ├── sponsors/         # Sponsor logos and tier graphics
+│       ├── committees/       # Committee portraits
+│       └── logos/            # Conference logos and posters
 └── README.md                 # Project introduction
 ```
 

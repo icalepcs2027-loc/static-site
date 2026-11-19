@@ -85,7 +85,7 @@ Define the core metadata under the `[params]` namespace:
 
 ### Branding Logos and Toggles
 
-* **Graphic Logo**: Set `logo_image = "/img/your-logo.png"` to use an image logo in the navbar.
+* **Graphic Logo**: Set `logo_image = "/img/logos/your-logo.png"` to use an image logo in the navbar.
 * **Dynamic Text Logo fallback**: Comment out `logo_image` to automatically generate a styled text logo using `logo_prefix` and `logo_suffix`.
 * **Interactivity Toggles**:
   * `enable_countdown = true` (Toggles the countdown timer on the homepage)
@@ -177,7 +177,7 @@ Edit `data/sponsors.yaml`. The `sponsors-grid` shortcode renders sponsor graphic
 
 ```yaml
 - name: "Quantum Dynamics Corp."
-  logo: "/img/ipac28_600x304.png"
+  logo: "/img/sponsors/ipac28_600x304.png"
   url: "https://example.com/quantum-dynamics"
   tier: "platinum"
   tagline: "Pioneering the next generation of particle accelerator power systems."
@@ -288,8 +288,8 @@ Parameters:
 Example:
 
 ```markdown
-{{< download-button url="/img/poster_a0.png" label="Download A0 Poster" filename="poster_a0.png" theme="primary" >}}
-{{< download-button url="/img/poster_a4.png" label="Download A4 Poster" filename="poster_a4.png" theme="secondary" >}}
+{{< download-button url="/img/logos/poster_a0.png" label="Download A0 Poster" filename="poster_a0.png" theme="primary" >}}
+{{< download-button url="/img/logos/poster_a4.png" label="Download A4 Poster" filename="poster_a4.png" theme="secondary" >}}
 ```
 
 #### Manual Timeline

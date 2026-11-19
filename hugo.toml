@@ -26,8 +26,8 @@ unsafe = true
 # logo_prefix / logo_suffix は文字ロゴ用です。
 logo_prefix = "ICALEPCS"
 logo_suffix = "2027"
-logo_image = "/img/ICALEPCS2027_logo.png"
-favicon = "/img/ICALEPCS2027_logo.png"
+logo_image = "/img/logos/ICALEPCS2027_logo.png"
+favicon = "/img/logos/ICALEPCS2027_logo.png"
 
 # ---------------------------------------------------------------------------
 # 大会名・開催日時・連絡先 / Conference Details
@@ -48,7 +48,7 @@ registration_link = "https://indico.jacow.org/event/139/"
 # hero_image: 冒頭のポスター画像
 # enable_*: 各セクションを表示する場合は true、非表示は false。
 hero_badge = "The 21st International Conference on Accelerator and Large Experimental Physics Control Systems"
-hero_image = "/img/ICALEPCS2027_Poster.png"
+hero_image = "/img/logos/ICALEPCS2027_Poster.png"
 enable_countdown = true
 # 統計表示（手動入力）：参加者数 / 発表件数 / 出展者数
 enable_stats = false
