@@ -12,13 +12,13 @@ ICALEPCS brings together control systems specialists from accelerator facilities
 
 ## Tiered Exhibition Packages
 
-|                              | [Platinum](#platinum-sponsor) | [Gold](#gold-sponsor) | [Silver](#silver-sponsor) | [Bronze](#bronze-sponsor) | [Exhibitor](#exhibitor) |
-|------------------------------|---------------|-------------|-------------|-------------|-------------|
-| Booth Size                   | 6.0 × 2.5 m   | 6.0 × 2.5 m | 3.0 × 2.5 m | 3.0 × 2.0 m | 3.0 × 2.0 m |
-| Logo on Conference Giveaways | YES           | YES         | -           | -           | -           |
-| Logo on Conference Signage   | Extra Large   | Large       | Normal      | Normal      | -           |
-| Delegate Passes Included     | 4             | 3           | 2           | 1           | -           |
-| Price                        | JPY 1,000,000 | JPY 800,000 | JPY 400,000 | JPY 300,000 | JPY 200,000 |
+|                                | [Platinum](#platinum-sponsor) | [Gold](#gold-sponsor) | [Silver](#silver-sponsor) | [Bronze](#bronze-sponsor) | [Exhibitor](#exhibitor) |
+| ------------------------------ | ----------------------------- | --------------------- | ------------------------- | ------------------------- | ----------------------- |
+| Booth Size                     | 6.0 × 2.5 m                   | 6.0 × 2.5 m           | 3.0 × 2.5 m               | 3.0 × 2.0 m               | 3.0 × 2.0 m             |
+| Logo on Conference Giveaways   | YES                           | YES                   | -                         | -                         | -                       |
+| Logo on Conference Signage     | Extra Large                   | Large                 | Normal                    | Normal                    | -                       |
+| Delegate Passes Included       | 4                             | 3                     | 2                         | 1                         | -                       |
+| Price                          | JPY 1,000,000                 | JPY 800,000           | JPY 400,000               | JPY 300,000               | JPY 200,000             |
 
 All package details are provisional and subject to change.
 
