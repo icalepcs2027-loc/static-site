@@ -1,12 +1,23 @@
 ---
-title: "Exhibitors & Sponsors"
+title: "ICALEPCS 2027 Supporters"
 url: "/exhibitor/list/"
 # custom_layout: false
 ---
 
-<!-- ## Exhibitors & Sponsors -->
+ICALEPCS 2027 is supported many sponsors and exhibitors.
 
-The exhibitor and sponsor information for ICALEPCS 2027 will open in the coming months. Please check back regularly for updates.
+## Platinum Sponsors
 
-<!--
-{{< sponsors-grid >}} -->
+to be announced
+
+## Gold Sponsors
+
+to be announced
+
+## Silver Sponsors
+
+to be announced
+
+## Blonse Sponsors
+
+to be announced

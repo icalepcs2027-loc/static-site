@@ -1,5 +1,5 @@
 ---
-title: "Exhibitor & Sponsor Prospectus"
+title: "Exhibition details"
 url: "/exhibitor/info/"
 ---
 
