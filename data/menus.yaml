@@ -68,7 +68,7 @@ main:
         url: "/venue/"
       - name: "Accommodation"
         url: "/accommodation/"
-      - name: "Getting to Tokyo"
+      - name: "Getting to Mito"
         url: "/city/"
       - name: "Visa Information"
         url: "/visa/"
