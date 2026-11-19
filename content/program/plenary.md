@@ -1,6 +1,6 @@
 ---
 title: "Plenary Speakers"
-url: "/program/pelanry/"
+url: "/program/plenary/"
 ---
 
 To be announced.

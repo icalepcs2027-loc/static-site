@@ -25,7 +25,7 @@ main:
       - name: "Scientific Program"
         url: "/scientific/"
       - name: "Plenary Speakers"
-        url: "/pelanry/"
+        url: "/plenary/"
       - name: "Student Program"
         url: "/student/"
       - name: "ICALEPCS awards"
