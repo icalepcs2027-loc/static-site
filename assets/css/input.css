@@ -77,6 +77,22 @@
 }
 
 /* --- Markdown Typography (.prose) Custom Styles for Standalone Tailwind --- */
+.prose .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  margin-block: 1.5rem;
+}
+
+.prose .table-scroll:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}
+
+.prose .table-scroll table {
+  margin: 0;
+}
+
 .prose table {
   width: 100%;
   border-collapse: collapse;

@@ -121,7 +121,7 @@
             {{ end }}
 
             <!-- Subpage Main Content Area -->
-            <div class="{{ if gt (len $siblingNodes) 0 }}lg:col-span-9{{ else }}lg:col-span-12 max-w-4xl mx-auto{{ end }} w-full">
+            <div class="{{ if gt (len $siblingNodes) 0 }}lg:col-span-9{{ else }}lg:col-span-12 max-w-4xl mx-auto{{ end }} w-full min-w-0">
                 {{ if .Params.custom_layout }}
                     <div class="prose prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-brand-secondary prose-a:text-brand-primary prose-a:no-underline hover:prose-a:underline">
                         {{ .Content }}
@@ -131,7 +131,7 @@
                         <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-brand-secondary mb-4 leading-tight">{{ .Title }}</h2>
                         <div class="h-1 w-12 bg-brand-primary rounded-full mb-8"></div>
                         
-                        <div class="prose prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-brand-secondary prose-a:text-brand-primary prose-a:no-underline hover:prose-a:underline prose-table:overflow-x-auto">
+                        <div class="prose prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-brand-secondary prose-a:text-brand-primary prose-a:no-underline hover:prose-a:underline">
                             {{ .Content }}
                         </div>
                     </div>
