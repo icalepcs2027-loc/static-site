@@ -256,34 +256,42 @@
 <section id="sponsors" class="py-24 bg-brand-bg-light border-t border-b border-slate-100 overflow-hidden">
     <div class="container">
         <div class="max-w-3xl mx-auto text-center mb-12 fade-up visible">
-            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-4 pb-4 relative inline-block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-brand-primary after:rounded-full">Our Sponsors</h2>
+            <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-secondary mb-4 pb-4 relative inline-block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-brand-primary after:rounded-full">ICALEPCS 2027 Supporters</h2>
             <p class="text-slate-500 mt-2 text-sm">Grateful for the support of our industry partners.</p>
         </div>
 
-        <!-- Hardware-accelerated Infinite Scrolling Loop -->
-        <div class="w-full relative py-6 fade-up visible select-none overflow-hidden">
-            <!-- Left & Right smooth fade overlays -->
-            <div class="absolute top-0 left-0 h-full w-20 bg-gradient-to-r from-brand-bg-light to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute top-0 right-0 h-full w-20 bg-gradient-to-l from-brand-bg-light to-transparent z-10 pointer-events-none"></div>
-            
-            <div class="animate-marquee gap-8 items-center flex">
-                {{/* Loop 1 */}}
-                {{ range hugo.Data.sponsors }}
-                    <a href="{{ .url }}" class="flex items-center justify-center bg-white px-8 py-4 w-44 h-20 rounded-xl shadow-sm border border-slate-150/40 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary/20 transition-all duration-200 flex-shrink-0" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
-                        <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
-                    </a>
-                {{ end }}
-                {{/* Loop 2 (seamless connector) */}}
-                {{ range hugo.Data.sponsors }}
-                    <a href="{{ .url }}" class="flex items-center justify-center bg-white px-8 py-4 w-44 h-20 rounded-xl shadow-sm border border-slate-150/40 hover:-translate-y-0.5 hover:shadow-md hover:border-brand-primary/20 transition-all duration-200 flex-shrink-0" target="_blank" rel="noopener noreferrer" title="{{ .name }}" aria-hidden="true">
-                        <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="" class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300">
-                    </a>
+        {{ range slice (dict "key" "platinum" "title" "Platinum Sponsors") (dict "key" "gold" "title" "Gold Sponsors") }}
+            {{ $sponsors := where hugo.Data.sponsors "tier" .key }}
+            {{ if $sponsors }}
+            <div class="home-sponsors-tier home-sponsors-tier--{{ .key }}">
+                <h3 class="text-xl font-heading font-bold text-brand-secondary text-center mb-6">{{ .title }}</h3>
+                <div class="home-sponsors-fixed">
+                    {{ range $sponsors }}
+                        {{ partial "sponsors/home-logo.html" (dict "sponsor" . "duplicate" false) }}
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+
+        {{ $movingSponsors := (where hugo.Data.sponsors "tier" "silver") | append (where hugo.Data.sponsors "tier" "bronze") }}
+        {{ if $movingSponsors }}
+        <div class="home-sponsors-stream" aria-label="Silver and Bronze Sponsors">
+            <div class="home-sponsors-track">
+                {{ range seq 2 }}
+                    {{ $duplicate := eq . 2 }}
+                    <div class="home-sponsors-copy"{{ if $duplicate }} aria-hidden="true"{{ end }}>
+                        {{ range $movingSponsors }}
+                            {{ partial "sponsors/home-logo.html" (dict "sponsor" . "duplicate" $duplicate) }}
+                        {{ end }}
+                    </div>
                 {{ end }}
             </div>
         </div>
-        
+        {{ end }}
+
         <div class="text-center fade-up visible mt-8">
-            <a href="{{ `exhibitor/register/` | relURL }}" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-sm bg-transparent border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-200">
+            <a href="{{ `exhibitor/info/` | relURL }}" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-sm bg-transparent border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-200">
                 Become a Sponsor <i class="fas fa-chevron-right text-[0.8em]"></i>
             </a>
         </div>

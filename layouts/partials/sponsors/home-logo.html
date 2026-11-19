@@ -1,0 +1,4 @@
+{{- $sponsor := .sponsor -}}
+<a href="{{ $sponsor.url }}" class="home-sponsor-logo home-sponsor-logo--{{ $sponsor.tier | lower }}" target="_blank" rel="noopener noreferrer" title="{{ $sponsor.name }}"{{ if .duplicate }} tabindex="-1"{{ end }}>
+    <img src="{{ $sponsor.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ if not .duplicate }}{{ $sponsor.name }}{{ end }}" loading="lazy">
+</a>
