@@ -1,45 +1,82 @@
 # Questions and answers are displayed in file order. Answers support Markdown.
 # Set hidden: true on an item or section to hide it.
+# Internal links are relative to /about/faq/ so they also work under a test-site subdirectory.
 intro: >-
-  Find quick answers to common questions about abstract submission, registration, travel, and accommodation for ICALEPCS 2027.
+  Find quick answers about ICALEPCS 2027, registration, abstract submission, social events, facility tours, and travel. Follow the links in each answer for further details.
 
 sections:
   - title: "General & Abstracts"
     items:
       - question: "When and where will ICALEPCS 2027 take place?"
         answer: |
-          ICALEPCS 2027 will be held from **October 4-8, 2027**, at the **[Mito City Civic Center](https://www.mito-hall.jp/english/)**, located in the Mito city, Ibaraki prefecture, Japan.
-           <!-- Satellite meetings and registration check-ins will commence on Sunday, June 4, 2028. -->
+          ICALEPCS 2027 will take place on **October 4-8, 2027**, at the **[Mito City Civic Center](https://www.mito-hall.jp/english/)** in Mito, Ibaraki, Japan.  
+          Please see the [Key Dates](../../key-dates/) for the schedule.
 
-      - question: "What is the deadline for abstract submission?"
-        hidden: true
+      - question: "When can I submit an abstract?"
         answer: |
-          The abstract submission deadline is **December 5, 2027, 23:59 JST (UTC+9)**. To submit an abstract, you must log in to the JACoW Indico platform. No late abstracts will be accepted.
+          Abstract submission opens on **March 1, 2027**, and closes on **May 31, 2027**.  
+          Please see [Key Dates](../../key-dates/) for the schedule and the [Abstract Submission page](../../authors/abstract/) for the latest submission instructions.
 
-      - question: "How many abstracts can I submit as a primary author?"
-        hidden: true
+      - question: "When will the Satellite Workshops take place?"
         answer: |
-          Usually, an individual is limited to submitting **one abstract as the primary presenter**. You may be listed as a co-author on multiple abstracts.
+          The Satellite Workshops are planned for **October 2-3, 2027**, the weekend immediately preceding the conference.  
+          Please see the [Satellite Workshops page](../../program/satellite/) for the latest details.
 
-  - title: "Registration & Grants"
+  - title: "Registration & Fees"
     items:
-      - question: "When will registration open and what are the fees?"
+      - question: "When will registration open?"
         answer: |
-          To be announced.
-          <!-- Registration is scheduled to open in **January 2028**. Early registration discounts will be available until **April 1, 2028**. Detailed registration tiers (Regular, Student, Exhibitor) will be announced shortly. -->
+          Early registration opens on **March 1, 2027**, and closes on **May 31, 2027**. We encourage you to register early to take advantage of the reduced registration fee.  
+          Registration will be handled through Indico. Please see the [Registration page](../../registration/) for the registration link, fees, and deadlines.
 
-      - question: "Are there grants available for students?"
+      - question: "What are the standard registration fees?"
         answer: |
-          To be announced.
-          <!-- Yes, a robust Student Grant Program will be available to help cover registration fees, economy travel, and shared accommodation in Tokyo. Applications will open alongside registration and close in **February 2028**. -->
+          Please see the [Registration page](../../registration/) for fees and package details. We encourage you to register during the **Early Registration** period to take advantage of the reduced fee.
 
-  - title: "Visas & Travel"
+      - question: "Are discounted registration fees available for students?"
+        answer: |
+          Yes! Discounted registration fees are available for students. Please see the [Registration page](../../registration/) for details.
+
+  - title: "Social Events & Facility Tours"
     items:
-      - question: "Do I need a visa to enter Japan?"
+      - question: "When and where is the conference banquet?"
         answer: |
-          For more information please refer to [visa information](/travel/visa).
+          The conference banquet is planned for **Thursday, October 7, 2027**, at the **Mito Plaza Hotel**. The banquet fee is included to the registration fees (Except for late registration).
 
-      - question: "Will the conference provide visa support letters?"
+          Please see the [Social Events page](../../program/social/) for details.
+
+      - question: "Will facility tours be offered?"
         answer: |
-          To be announced.
-          <!-- Yes! The Local Organizing Committee will provide official visa support documentation (invitation letter, guarantee letter, etc.) *only* to registered and fully paid attendees, presenters, and exhibitors. -->
+          Facility tours are planned for **Friday, October 8, 2027**, the final day of the conference, with visits to **J-PARC** or **KEK's Tsukuba Campus**.
+
+          Please see the [Facility Tours page](../../program/tour/) for the latest details.
+
+  - title: "Visas, Travel & Accommodation"
+    items:
+      - question: "How can I get to the conference venue?"
+        answer: |
+          Travel from Tokyo's Haneda or Narita Airport to Mito takes approximately **2-3 hours by public transportation**.
+
+          Please see the [Getting to Mito page](../../travel/city/) and [Venue page](../../travel/venue/) for details.
+
+      - question: "Where can I find visa information?"
+        answer: |
+          Please see the [Visa Information page](../../travel/visa/) for the latest conference-specific guidance.
+
+      - question: "Will visa support letters be available?"
+        answer: |
+          Please see the [Visa Information page](../../travel/visa/) for the latest information on visa support letters and request procedures. For inquiries, please use the [Contact page](../../contact/).
+
+      - question: "Where can I find accommodation information?"
+        answer: |
+          Please see the [Accommodation page](../../travel/accommodation/) for the latest accommodation information.
+
+  - title: "Exhibition & Inquiries"
+    items:
+      - question: "How can my company exhibit or sponsor the conference?"
+        answer: |
+          Details of exhibition and sponsorship packages are described on the [Exhibit & Sponsor page](../../exhibitor/exhibit-and-sponsor/).
+
+      - question: "Who should I contact with other questions?"
+        answer: |
+          Please email [contact@icalepcs2027.org](mailto:contact@icalepcs2027.org). 
