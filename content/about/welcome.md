@@ -11,7 +11,7 @@ ICALEPCS brings together control system specialists from major scientific facili
 
 With the help of the International Scientific Advisory Committee (ISAC), we are preparing a program that reflects the latest developments in our field. We hope the conference will give you the chance to meet experts from around the world, exchange ideas, and start new collaborations. We look forward to welcoming both familiar faces and those joining us for the first time.
 
-ICALEPCS 2027 is hosted by the High Energy Accelerator Research Organization (KEK). KEK operates SuperKEKB, the world’s highest-luminosity electron–positron collider, and the Photon Factory light sources, and runs the J-PARC proton accelerator complex jointly with the Japan Atomic Energy Agency (JAEA). Visit KEK’s website (KEKへのリンク) to learn more about its research programs.
+ICALEPCS 2027 is hosted by the High Energy Accelerator Research Organization (KEK). KEK operates SuperKEKB, the world’s highest-luminosity electron–positron collider, and the Photon Factory light sources, and runs the J-PARC proton accelerator complex jointly with the Japan Atomic Energy Agency (JAEA). Visit [KEK’s website](https://www.kek.jp/en/) to learn more about its research programs.
 
 The conference will take place at the Mito Civic Hall in Mito, the capital of Ibaraki Prefecture. Mito is home to Kairakuen, one of the three great gardens of Japan, and lies within easy reach of both KEK in Tsukuba and J-PARC in Tokai.
 
