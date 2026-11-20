@@ -55,7 +55,7 @@ main:
   - name: "Exhibition"
     url: "/exhibitor"
     children:
-      - name: "ICALEPCS 2027 Supporters"
+      - name: "ICALEPCS 2027 Sponsors"
         url: "/list/"
       - name: "Visit the Industrial Exhibition"
         url: "/visit/"

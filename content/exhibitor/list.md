@@ -1,5 +1,5 @@
 ---
-title: "ICALEPCS 2027 Supporters"
+title: "ICALEPCS 2027 Sponsors"
 url: "/exhibitor/list/"
 # custom_layout: false
 ---
