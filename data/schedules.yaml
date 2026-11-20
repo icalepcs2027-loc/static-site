@@ -18,27 +18,27 @@
 
 - date: "2027-03-01T00:00:00+09:00"
   order: 30
-  title: "Abstract Submission Opens"
-  type: "open"
-  description: "Abstract submission opens."
-
-- date: "2027-03-01T00:00:00+09:00"
-  order: 40
   title: "Early Registration Opens"
   type: "open"
   description: "Early registration opens."
 
-- date: "2027-05-31T23:59:59+09:00"
-  order: 50
-  title: "Abstract Submission Closes"
-  type: "close"
-  description: "Abstract submission closes."
+- date: "2027-03-01T00:00:00+09:00"
+  order: 40
+  title: "Abstract Submission Opens"
+  type: "open"
+  description: "Abstract submission opens."
 
 - date: "2027-05-31T23:59:59+09:00"
-  order: 60
+  order: 50
   title: "Early Registration Closes"
   type: "close"
   description: "Early registration closes."
+
+- date: "2027-05-31T23:59:59+09:00"
+  order: 60
+  title: "Abstract Submission Closes"
+  type: "close"
+  description: "Abstract submission closes."
 
 - date: "2027-06-01T00:00:00+09:00"
   order: 70
