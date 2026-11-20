@@ -9,11 +9,11 @@ Registration will be handled through [Indico](https://indico.jacow.org/event/139
 
 Early registration will open on **March 1, 2027**.
 
-| Type    | Fee         | Deadline        |
-| ------- | ----------- | --------------- |
-| Early   | JPY 80,000  | May 31, 2027    |
-| Regular | JPY 100,000 | July 31, 2027   |
-| Late    | JPY 110,000 | August 31, 2027 |
+| Type    | Standard Fee | Student Fee | Deadline        |
+| ------- | ------------ | ----------- | --------------- |
+| Early   | JPY 80,000   | JPY 10,000  | May 31, 2027    |
+| Regular | JPY 100,000  | JPY 20,000  | July 31, 2027   |
+| Late    | JPY 110,000  | JPY 30,000  | August 31, 2027 |
 
 Dates are shown in Japan Standard Time (JST). Please also refer to [Key Dates](/key-dates/).
 
@@ -22,6 +22,8 @@ Dates are shown in Japan Standard Time (JST). Please also refer to [Key Dates](/
 ### Early Registration
 
 Price: **JPY 80,000**
+
+Student fee: **JPY 10,000**
 
 Full delegate registration includes:
 
@@ -34,11 +36,15 @@ Full delegate registration includes:
 
 Price: **JPY 100,000**
 
+Student fee: **JPY 20,000**
+
 Includes the same full delegate package as Early Registration.
 
 ### Late Registration
 
 Price: **JPY 110,000**
+
+Student fee: **JPY 30,000**
 
 Includes the same full delegate package as Early Registration, **except for the conference banquet**.
 
