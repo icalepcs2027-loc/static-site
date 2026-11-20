@@ -26,7 +26,7 @@ All package details are provisional and subject to change.
 
 Price: **JPY 1,000,000**
 
-- A spacious **6.0 × 2.5 m** exhibition booth in **Yagura Plaza**, close to the plenary session venue (the same booth size as Gold).
+- A spacious **6.0 × 2.5 m** exhibition booth in the most prominent location in **Yagura Plaza**, close to the plenary session venue (the same booth size as Gold).
 - Your company logo on conference giveaways.
 - An extra-large company logo on on-site conference signage.
 - **4 delegate passes** included.
@@ -35,7 +35,7 @@ Price: **JPY 1,000,000**
 
 Price: **JPY 800,000**
 
-- A spacious **6.0 × 2.5 m** exhibition booth in **Yagura Plaza**, close to the plenary session venue (the same booth size as Platinum).
+- A spacious **6.0 × 2.5 m** exhibition booth near the center of **Yagura Plaza**, close to the plenary session venue (the same booth size as Platinum).
 - Your company logo on conference giveaways.
 - A large company logo on on-site conference signage.
 - **3 delegate passes** included.
