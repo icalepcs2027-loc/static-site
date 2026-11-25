@@ -11,13 +11,13 @@
     - name: "Masanori"
       surname: "Satoh"
       institution: "KEK"
-      avatar: "/img/committees/masanoris.png"
+      avatar: "/img/committees/masanoris.jpg"
 
 
     - name: "Shuei"
       surname: "Yamada"
       institution: "KEK/J-PARC"
-      avatar: "/img/committees/shueiy.png"
+      avatar: "/img/committees/shueiy.jpg"
   members:
 
 - id: "iec"
