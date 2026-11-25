@@ -70,6 +70,8 @@ main:
         url: "/accommodation/"
       - name: "Getting to Mito"
         url: "/city/"
+      - name: "Sightseeing"
+        url: "/sightseeing/"
       - name: "Visa Information"
         url: "/visa/"
   - name: "Contact"

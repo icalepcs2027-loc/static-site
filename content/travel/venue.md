@@ -3,42 +3,20 @@ title: "Venue"
 url: "/travel/venue/"
 ---
 
-Under Construction
+ICALEPCS 2027 will be held at **Mito Civic Center**, Mito City, Ibaraki prefecture, Japan.
 
-<!--
-The conference will be held at Tokyo International Forum, one of Japan's premier convention and performing arts centers, located in the heart of Tokyo. Situated adjacent to Tokyo Station and within walking distance of Ginza and Marunouchi, the venue offers excellent access to major transportation hubs, hotels, restaurants, and shopping areas.
+# Google Map
 
-Tokyo International Forum features modern conference facilities, spacious meeting rooms, and advanced technical infrastructure, providing an ideal environment for international scientific conferences. Its central location and convenient transportation links make it easily accessible from both Narita and Haneda airports.
+(google map 埋め込み)
 
-For more information about the venue, please visit:
+# Access from Mito Station.
 
-https://www.t-i-forum.co.jp/en/
+東京の主要空港から水戸駅へのアクセスは getting to Mito を参照してください
 
- ### Access
+# floor map
 
-The venue is highly accessible via Tokyo's extensive public transportation network. Please refer to the official Tokyo Travel Guide for detailed transportation information: [https://www.gotokyo.org/en/plan/getting-around/](https://www.gotokyo.org/en/plan/getting-around/) 
+to be announced.
 
+# More information
 
-## Venue Layout
-The Tokyo International Forum features several distinct halls and spaces designed to accommodate large-scale international conferences. The primary halls for IPAC'28 are:
-
-{{< tab-container >}}
-    {{< tab title="Plenary Sessions" >}}
-The Plenary talks will be held in Hall C. The floor map is shown below.
-
-https://www.t-i-forum.co.jp/en/facilities/c/
-    {{< /tab >}}
-
-    {{< tab title="Parallel Sessions" >}}
-The parallel sessions will be held in Hall B5. The floor map is shown below.
-
-https://www.t-i-forum.co.jp/en/facilities/b5/
-    {{< /tab >}}
-
-    {{< tab title="Exhibition Area" >}}
-The main exhibition area where posters, industrial exhibits, and commercial booths will be located at Hall E. The floor map is shown below.
-
-https://www.t-i-forum.co.jp/en/facilities/e/
-    {{< /tab >}}
-{{< /tab-container >}}
--->
+水戸市民会館公式サイトへのリンク
